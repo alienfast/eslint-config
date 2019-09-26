@@ -1,5 +1,5 @@
 jobs:
-  autorelease:
+  build:
     branches:
       ignore:
         - master
