@@ -2,6 +2,13 @@
   "name": "@alienfast/eslint-config",
   "version": "1.0.0",
   "license": "See license in LICENSE",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alienfast/eslint-config.git"
+  },
   "main": "index.js",
   "scripts": {
     "clean:yarn": "rm -rf ./packages/*/node_modules ./packages/*/yarn.lock yarn.lock node_modules",
