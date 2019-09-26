@@ -1,0 +1,45 @@
+{
+  "name": "@alienfast/eslint-config",
+  "version": "1.0.0",
+  "license": "See license in LICENSE",
+  "main": "index.js",
+  "scripts": {
+    "clean:yarn": "rm -rf ./packages/*/node_modules ./packages/*/yarn.lock yarn.lock node_modules",
+    "clean": "yarn clean:yarn",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "lint:check": "yarn lint:print | eslint-config-prettier-check",
+    "lint:print": "eslint --print-config src/index.ts",
+    "prettier": "prettier --write \"{,**/}*.{ts,tsx,js,json,md}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,md,gql}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,js,tsx,jsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1"
+  },
+  "devDependencies": {
+    "@alienfast/build": "^6.1.7",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2"
+  }
+}

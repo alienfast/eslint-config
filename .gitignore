@@ -1,0 +1,11 @@
+node_modules
+*.log
+tmp
+.idea
+# local runs
+test-report.xml
+# ci runs
+test-results
+/build
+/.cache
+
