@@ -23,7 +23,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ];
               then \
-                 yarn run releaseAuto && npm run release
+                 yarn run releaseAuto && npm publish
             fi
           name: Release and publish to npm
     working_directory: ~/project

@@ -1,7 +1,8 @@
 {
   "name": "@alienfast/eslint-config",
+  "description": "AlienFast's eslint config.",
   "version": "1.0.0",
-  "license": "SEE LICENSE in LICENSE",
+  "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -44,9 +45,11 @@
     "eslint-plugin-prettier": "^3.1.1"
   },
   "devDependencies": {
-    "@alienfast/build": "^6.1.7",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
+  },
+  "foo": {
+    "@alienfast/build": "^6.1.7"
   }
 }
