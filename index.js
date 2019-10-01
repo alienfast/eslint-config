@@ -11,7 +11,13 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/react',
     'plugin:import/typescript',
+    'plugin:jest/recommended',
   ],
+  env: {
+    'jest/globals': true,
+    browser: true,
+    node: true,
+  },
   parserOptions: {
     project: './tsconfig.lint.json',
     ecmaVersion: 2018,
@@ -55,7 +61,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/prefer-for-of': 'error',
-    '@typescript-eslint/prefer-function-type': 'error',
+    '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/unified-signatures': 'error',
 
     //---------------------------------------------
