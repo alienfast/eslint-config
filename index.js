@@ -16,6 +16,7 @@ module.exports = {
   env: {
     'jest/globals': true,
     browser: true,
+    es6: true,
     node: true,
   },
   parserOptions: {
@@ -42,7 +43,7 @@ module.exports = {
     //---------------------------------------------
     // typescript-eslint
     //
-    '@typescript-eslint/array-type': 'error',
+    '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
