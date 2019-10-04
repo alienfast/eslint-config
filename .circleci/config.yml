@@ -1,5 +1,5 @@
 jobs:
-  autorelease:
+  build:
     branches:
       ignore:
         - master
@@ -12,8 +12,6 @@ jobs:
           key: yarn-all-branches
       - run: ncu -u
       - run: yarn install
-      - run: yarn run releaseStart
-      - run: yarn test:unit
       - save_cache:
           key: yarn-all-branches-{{ epoch }}
           paths:
@@ -23,8 +21,8 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ];
               then \
-                 yarn run releaseAuto && npm run release
+                 yarn run releaseAuto && npm publish
             fi
-          name: Finish release and publish to npm
+          name: Release and publish to npm
     working_directory: ~/project
 version: 2

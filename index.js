@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'eslint-comments', 'import'],
+  plugins: ['@typescript-eslint', 'eslint-comments', 'import', 'jest'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -11,7 +11,14 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/react',
     'plugin:import/typescript',
+    'plugin:jest/recommended',
   ],
+  env: {
+    'jest/globals': true,
+    browser: true,
+    es6: true,
+    node: true,
+  },
   parserOptions: {
     project: './tsconfig.lint.json',
     ecmaVersion: 2018,
@@ -36,7 +43,7 @@ module.exports = {
     //---------------------------------------------
     // typescript-eslint
     //
-    '@typescript-eslint/array-type': 'error',
+    '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
@@ -49,8 +56,13 @@ module.exports = {
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/prefer-for-of': 'error',
-    '@typescript-eslint/prefer-function-type': 'error',
+    '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/unified-signatures': 'error',
 
     //---------------------------------------------
