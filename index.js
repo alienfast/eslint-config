@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'eslint-comments', 'import', 'jest'],
+  plugins: ['@typescript-eslint', 'eslint-comments', 'import', 'simple-import-sort', 'jest'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -39,6 +39,7 @@ module.exports = {
     'object-shorthand': 'error',
     'one-var': ['error', 'never'],
     'sort-keys': 'error',
+    'sort-imports': 'off',
 
     //---------------------------------------------
     // typescript-eslint
@@ -96,6 +97,8 @@ module.exports = {
     'import/no-named-export': 'off', // we want everything to be a named export
     // Forbid a module from importing itself
     'import/no-self-import': 'error',
+    // use the simple sort plugin instead
+    'import/order': 'off',
     // Require modules with a single export to use a default export
     'import/prefer-default-export': 'off', // we want everything to be named
 
