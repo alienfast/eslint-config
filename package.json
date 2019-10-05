@@ -47,7 +47,7 @@
     "eslint-plugin-simple-import-sort": "^4.0.0"
   },
   "devDependencies": {
-    "@alienfast/ci": "^7.0.2",
+    "@alienfast/ci": "^7.0.5",
     "husky": "^3.0.8",
     "lint-staged": "^9.4.1",
     "prettier": "^1.18.2"
