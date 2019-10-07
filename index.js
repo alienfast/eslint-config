@@ -38,6 +38,8 @@ module.exports = {
     'no-throw-literal': 'error',
     'object-shorthand': 'error',
     'one-var': ['error', 'never'],
+    // note you must disable the base rule as it can report incorrect errors
+    'require-await': 'off',
     'sort-keys': 'error',
     'sort-imports': 'off',
 
