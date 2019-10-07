@@ -45,6 +45,7 @@ module.exports = {
     // typescript-eslint
     //
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+    '@typescript-eslint/camelcase': ['error', { ignoreDestructuring: true }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
@@ -92,7 +93,7 @@ module.exports = {
     // Forbid mutable exports
     'import/no-mutable-exports': 'error',
     // Prevent importing the default as if it were named
-    'import/no-named-default': 'error',
+    'import/no-named-default': 'off',
     // Prohibit named exports
     'import/no-named-export': 'off', // we want everything to be a named export
     // Forbid a module from importing itself
