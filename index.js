@@ -47,7 +47,7 @@ module.exports = {
     // typescript-eslint
     //
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
-    '@typescript-eslint/camelcase': ['error', { ignoreDestructuring: true }],
+    '@typescript-eslint/camelcase': 'off', // apollo generated files
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
