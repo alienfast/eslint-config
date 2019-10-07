@@ -1,7 +1,7 @@
 {
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
     "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
@@ -47,7 +47,7 @@
     "eslint-plugin-simple-import-sort": "^4.0.0"
   },
   "devDependencies": {
-    "@alienfast/ci": "^7.0.5",
+    "@alienfast/ci": "^7.0.6",
     "husky": "^3.0.8",
     "lint-staged": "^9.4.1",
     "prettier": "^1.18.2"
