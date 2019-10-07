@@ -101,6 +101,8 @@ module.exports = {
     ],
     // Forbid mutable exports
     'import/no-mutable-exports': 'error',
+    // not needed - ts does this
+    'import/named': 'off',
     // Prevent importing the default as if it were named
     'import/no-named-default': 'off',
     // Prohibit named exports
