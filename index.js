@@ -73,6 +73,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'off',
+    '@typescript-eslint/require-await': 'off',
     '@typescript-eslint/unified-signatures': 'error',
 
     //---------------------------------------------
