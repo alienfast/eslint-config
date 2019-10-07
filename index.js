@@ -40,7 +40,7 @@ module.exports = {
     'one-var': ['error', 'never'],
     // note you must disable the base rule as it can report incorrect errors
     'require-await': 'off',
-    'sort-keys': 'error',
+    'sort-keys': 'off', // just too painful with css class ordering to have to ignore most files
     'sort-imports': 'off',
 
     //---------------------------------------------
