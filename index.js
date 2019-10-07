@@ -118,8 +118,8 @@ module.exports = {
     'eslint-comments/no-aggregating-enable': 'error',
     // disallow duplicate eslint-disable comments
     'eslint-comments/no-duplicate-disable': 'error',
-    // disallow eslint-disable comments without rule names
-    'eslint-comments/no-unlimited-disable': 'error',
+    // disallow eslint-disable comments without rule names - default generated in apollo
+    'eslint-comments/no-unlimited-disable': 'off',
     // disallow unused eslint-disable comments
     'eslint-comments/no-unused-disable': 'error',
     // disallow unused eslint-enable comments
