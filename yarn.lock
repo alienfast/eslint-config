@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@alienfast/ci@^7.0.5":
-  version "7.0.5"
-  resolved "https://npm.pkg.github.com/download/@alienfast/ci/7.0.5/5162abca70813b1f144aab89ffd1fb4763af673bda2a768b1119a0b8e4d2e391#112e65bb60b53c5fdf731b5c366ce03488e4be54"
-  integrity sha1-ES5lu2C1PF/fcxtcNmzgNIjkvlQ=
+"@alienfast/ci@^7.0.6":
+  version "7.0.6"
+  resolved "https://npm.pkg.github.com/download/@alienfast/ci/7.0.6/6e5dc8014dbdf34917d3727f1e8864b1d6258d0f93ffc0af55dfa7a9fbf53001#578b2f4a4aae9b762641e71f564d2336b66a021c"
+  integrity sha1-V4svSkqum3YmQecfVk0jNrZqAhw=
   dependencies:
-    "@alienfast/common-node" "^7.0.5"
-    "@alienfast/logger" "^7.0.5"
-    "@alienfast/logger-node" "^7.0.5"
+    "@alienfast/common-node" "^7.0.6"
+    "@alienfast/logger" "^7.0.6"
+    "@alienfast/logger-node" "^7.0.6"
     "@types/dotenv" "^6.1.1"
     "@types/fs-extra" "^8.0.0"
-    "@types/lodash" "^4.14.138"
+    "@types/lodash" "^4.14.141"
     "@types/semver" "^6.0.2"
     "@types/shelljs" "^0.8.5"
-    "@types/yargs" "^13.0.2"
-    date-fns "^2.1.0"
+    "@types/yargs" "^13.0.3"
+    date-fns "^2.4.1"
     dotenv "^8.1.0"
     fs-extra "^8.1.0"
     glob-all "^3.1.0"
@@ -27,18 +27,18 @@
     shelljs "^0.8.3"
     yargs "^14.0.0"
 
-"@alienfast/common-node@^7.0.5":
-  version "7.0.5"
-  resolved "https://npm.pkg.github.com/download/@alienfast/common-node/7.0.5/2bbb31cdc25e85f79c0303538fbdc96ac6e744154e4ca4b279793e0b185f8ef1#4feaeaf34c1699468f9255e10fae84dce9d99753"
-  integrity sha1-T+rq80wWmUaPklXhD66E3OnZl1M=
+"@alienfast/common-node@^7.0.6":
+  version "7.0.6"
+  resolved "https://npm.pkg.github.com/download/@alienfast/common-node/7.0.6/c51760b706e351596c4a3226af30e0d433b027ba16f5de8455acf1bb318e5af4#537544b565dbd117a15c4aba3d15b5c5134f3517"
+  integrity sha1-U3VEtWXb0RehXEq6PRW1xRNPNRc=
   dependencies:
-    "@alienfast/logger" "^7.0.5"
+    "@alienfast/logger" "^7.0.6"
     "@types/del" "^4.0.0"
     "@types/findup-sync" "^2.0.2"
     "@types/fs-extra" "^8.0.0"
     "@types/js-yaml" "^3.12.1"
-    "@types/lodash" "^4.14.138"
-    "@types/node" "12.7.5"
+    "@types/lodash" "^4.14.141"
+    "@types/node" "12.7.11"
     "@types/shelljs" "^0.8.5"
     "@types/stringify-object" "^3.2.0"
     "@types/strip-json-comments" "^3.0.0"
@@ -47,7 +47,7 @@
     findup-sync "^4.0.0"
     fs-extra "^8.1.0"
     glob-all "^3.1.0"
-    i18next "^17.0.14"
+    i18next "^17.0.18"
     js-yaml "^3.13.1"
     lodash "^4.17.15"
     shelljs "^0.8.3"
@@ -55,32 +55,32 @@
     strip-json-comments "^3.0.1"
     time-stamp "^2.2.0"
 
-"@alienfast/common@^7.0.5":
-  version "7.0.5"
-  resolved "https://npm.pkg.github.com/download/@alienfast/common/7.0.5/334464eafc1f95a79c1e7699ae1d0973f793e70483d27f7e8fae1b6eaa2c0fcf#def460cb9c3337cf4f5203339fb556fc6e70760b"
-  integrity sha1-3vRgy5wzN89PUgMzn7VW/G5wdgs=
+"@alienfast/common@^7.0.6":
+  version "7.0.6"
+  resolved "https://npm.pkg.github.com/download/@alienfast/common/7.0.6/3457c1d7cab3467321aa8920e9f3dfdfd64ecc8d7ba8766a5b31c238a55e776e#e7bf7353a1be9c0656205b0dd79ffec1d92c0d3c"
+  integrity sha1-579zU6G+nAZWIFsN15/+wdksDTw=
   dependencies:
     "@types/jest" "^24.0.18"
-    "@types/lodash" "^4.14.138"
-    i18next "^17.0.14"
+    "@types/lodash" "^4.14.141"
+    i18next "^17.0.18"
     js-cookie "^2.2.1"
     lodash "^4.17.15"
 
-"@alienfast/logger-node@^7.0.5":
-  version "7.0.5"
-  resolved "https://npm.pkg.github.com/download/@alienfast/logger-node/7.0.5/21880d51d38371a6966058dfe08466ff2e401b4b211bb2ae6d91a4c7b2b003c9#e1803d5caa75bed7f95a4a1e6eaa405e622354cd"
-  integrity sha1-4YA9XKp1vtf5WkoebqpAXmIjVM0=
+"@alienfast/logger-node@^7.0.6":
+  version "7.0.6"
+  resolved "https://npm.pkg.github.com/download/@alienfast/logger-node/7.0.6/39f8d2f2813bf6c83667df2abf2ad2b7e5e64f900665eefec0b4515fdb09dda3#b33767beb5c106bda5406bd44e189f2aafa697c8"
+  integrity sha1-szdnvrXBBr2lQGvUThifKq+ml8g=
   dependencies:
-    "@alienfast/logger" "^7.0.5"
+    "@alienfast/logger" "^7.0.6"
     chalk "^2.4.2"
     time-stamp "^2.2.0"
 
-"@alienfast/logger@^7.0.5":
-  version "7.0.5"
-  resolved "https://npm.pkg.github.com/download/@alienfast/logger/7.0.5/2c8c05c7b9bde72f9873302097f94518bcb910911e59c0c7b667531e40703986#faecae83d76a391785d6ada132d60e3ff43e0007"
-  integrity sha1-+uyug9dqOReF1q2hMtYOP/Q+AAc=
+"@alienfast/logger@^7.0.6":
+  version "7.0.6"
+  resolved "https://npm.pkg.github.com/download/@alienfast/logger/7.0.6/831b573b1e50a04da97ee98f480b5fad15f3fcca772c98e309dd6563fcc48511#215091981ec9a10b148a4b1ca684ef37cb9947ef"
+  integrity sha1-IVCRmB7JoQsUikscpoTvN8uZR+8=
   dependencies:
-    "@alienfast/common" "^7.0.5"
+    "@alienfast/common" "^7.0.6"
 
 "@babel/code-frame@^7.0.0":
   version "7.5.5"
@@ -207,7 +207,7 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
-"@types/lodash@^4.14.138":
+"@types/lodash@^4.14.141":
   version "4.14.141"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.141.tgz#d81f4d0c562abe28713406b571ffb27692a82ae6"
   integrity sha512-v5NYIi9qEbFEUpCyikmnOYe4YlP8BMUdTcNCAquAKzu+FA7rZ1onj9x80mbnDdOW/K5bFf3Tv5kJplP33+gAbQ==
@@ -229,10 +229,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.8.tgz#cb1bf6800238898bc2ff6ffa5702c3cadd350708"
   integrity sha512-FMdVn84tJJdV+xe+53sYiZS4R5yn1mAIxfj+DVoNiQjTYz1+OYmjwEZr1ev9nU0axXwda0QDbYl06QHanRVH3A==
 
-"@types/node@12.7.5":
-  version "12.7.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.5.tgz#e19436e7f8e9b4601005d73673b6dc4784ffcc2f"
-  integrity sha512-9fq4jZVhPNW8r+UYKnxF1e2HkDWOWKM5bC2/7c9wPV835I0aOrVbS/Hw/pWPk2uKrNXQqg9Z959Kz+IYDd5p3w==
+"@types/node@12.7.11":
+  version "12.7.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.11.tgz#be879b52031cfb5d295b047f5462d8ef1a716446"
+  integrity sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -269,7 +269,7 @@
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-13.1.0.tgz#c563aa192f39350a1d18da36c5a8da382bbd8228"
   integrity sha512-gCubfBUZ6KxzoibJ+SCUc/57Ms1jz5NjHe4+dI2krNmU5zCPAphyLJYyTOg06ueIyfj+SaCUqmzun7ImlxDcKg==
 
-"@types/yargs@^13.0.2":
+"@types/yargs@^13.0.3":
   version "13.0.3"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.3.tgz#76482af3981d4412d65371a318f992d33464a380"
   integrity sha512-K8/LfZq2duW33XW/tFwEAfnZlqIfVsoyRB3kfXdPXYhl0nfM8mmh7GS0jg7WrX2Dgq/0Ha/pR1PaR+BvmWwjiQ==
@@ -599,7 +599,7 @@ date-fns@^1.27.2:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
 
-date-fns@^2.1.0:
+date-fns@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.4.1.tgz#b53f9bb65ae6bd9239437035710e01cf383b625e"
   integrity sha512-2RhmH/sjDSCYW2F3ZQxOUx/I7PvzXpi89aQL2d3OAxSTwLx6NilATeUbe0menFE3Lu5lFkOFci36ivimwYHHxw==
@@ -740,10 +740,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-prettier@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.3.0.tgz#e73b48e59dc49d950843f3eb96d519e2248286a3"
-  integrity sha512-EWaGjlDAZRzVFveh2Jsglcere2KK5CJBhkNSa1xs3KfMUGdRiT7lG089eqPdvlzWHpAqaekubOsOMu8W8Yk71A==
+eslint-config-prettier@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.4.0.tgz#0a04f147e31d33c6c161b2dd0971418ac52d0477"
+  integrity sha512-YrKucoFdc7SEko5Sxe4r6ixqXPDP1tunGw91POeZTTRKItf/AMFYt/YLEQtZMkR2LVpAVhcAcZgcWpm1oGPW7w==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -1258,7 +1258,7 @@ husky@^3.0.8:
     run-node "^1.0.0"
     slash "^3.0.0"
 
-i18next@^17.0.14:
+i18next@^17.0.18:
   version "17.0.18"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-17.0.18.tgz#cca2503125af2370daa4657c5320d5ef6924c23a"
   integrity sha512-FpLbLwzYV/qen9ZTA+mOHiNzLxESnF+sQCe5wT7UShssfDiW/df5JdXuxnPsPQiUd+M1kpB3Jaawcn9RN6atig==
