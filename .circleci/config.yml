@@ -23,6 +23,6 @@ jobs:
               then \
                  yarn run releaseAuto && npm publish
             fi
-          name: Release and publish to npm
+          name: Release and publish
     working_directory: ~/project
 version: 2
