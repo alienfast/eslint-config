@@ -75,6 +75,7 @@ module.exports = {
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/require-await': 'off',
+    '@typescript-eslint/unbound-method': 'off', // takes 73s on js!  63% of the timing!
     '@typescript-eslint/unified-signatures': 'error',
 
     //---------------------------------------------
