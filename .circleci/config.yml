@@ -4,7 +4,7 @@ jobs:
       ignore:
         - master
     docker:
-      - image: alienfast/ci-node:5.0
+      - image: alienfast/ci-node:5.1
     steps:
       - checkout
       - add_ssh_keys
