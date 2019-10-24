@@ -1,7 +1,7 @@
 {
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
