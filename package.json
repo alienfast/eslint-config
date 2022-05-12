@@ -1,7 +1,8 @@
 {
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
-  "version": "1.0.17",
+  "packageManager": "yarn@3.2.0",
+  "version": "3.0.0",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -20,7 +21,7 @@
     "lint:print": "eslint --print-config src/index.ts",
     "prettier": "prettier --write \"{,**/}*.{ts,tsx,js,json,md}\""
   },
-  "husky": {
+  "xhusky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
@@ -36,20 +37,22 @@
     ]
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.20.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-simple-import-sort": "^4.0.0"
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0"
+  },
+  "old": {
+    "@alienfast/ci": "^7.0.35"
   },
   "devDependencies": {
-    "@alienfast/ci": "^7.0.28",
-    "husky": "^3.0.9",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2"
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2"
   }
 }
