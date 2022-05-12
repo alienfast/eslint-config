@@ -15,7 +15,7 @@ jobs:
       - save_cache:
           key: yarn-all-branches-{{ epoch }}
           paths:
-            - ~/.cache/yarn/v1
+            - .yarn/cache
             - .eslintcache
       - deploy:
           command: |
