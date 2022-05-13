@@ -9,3 +9,14 @@ test-results
 /build
 /.cache
 
+
+# yarn zero install enabled
+.pnp.*
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

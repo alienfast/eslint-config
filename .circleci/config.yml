@@ -9,13 +9,12 @@ jobs:
       - checkout
       - add_ssh_keys
       - restore_cache:
-          key: yarn-all-branches
+          key: eslint-all-branches
       - run: ncu -u
       - run: yarn install
       - save_cache:
-          key: yarn-all-branches-{{ epoch }}
+          key: eslint-all-branches-{{ epoch }}
           paths:
-            - ~/.cache/yarn/v1
             - .eslintcache
       - deploy:
           command: |
