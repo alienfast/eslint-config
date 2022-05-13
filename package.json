@@ -2,7 +2,7 @@
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@3.2.0",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -47,10 +47,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0"
   },
-  "old": {
-    "@alienfast/ci": "^7.0.35"
-  },
   "devDependencies": {
+    "@alienfast/ci": "^7.0.35",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2"

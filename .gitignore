@@ -10,9 +10,11 @@ test-results
 /.cache
 
 
-# yarn
+# yarn zero install enabled
 .pnp.*
 .yarn/*
+!.yarn/cache
+!.yarn/unplugged
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
