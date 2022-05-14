@@ -2,7 +2,7 @@
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@3.2.0",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -54,6 +54,7 @@
     "prettier": "^2.6.2"
   },
   "peerDependencies": {
-    "prettier": "*"
+    "prettier": "*",
+    "jest": "*"
   }
 }
