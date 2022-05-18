@@ -1,6 +1,13 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'eslint-comments', 'import', 'simple-import-sort', 'jest'],
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'eslint-comments',
+    'import',
+    'simple-import-sort',
+    'jest',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
