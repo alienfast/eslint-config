@@ -34,7 +34,6 @@ module.exports = {
     //---------------------------------------------
     // eslint
     //
-    'arrow-parens': ['error', 'as-needed'],
     'guard-for-in': 'error',
     'no-bitwise': 'error',
     'no-caller': 'error',
