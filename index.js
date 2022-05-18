@@ -1,8 +1,8 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
-    '@typescript-eslint',
     'prettier',
+    '@typescript-eslint',
     'eslint-comments',
     'import',
     'simple-import-sort',
@@ -12,7 +12,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier',
+    'plugin:prettier/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/react',
@@ -20,7 +20,7 @@ module.exports = {
     'plugin:jest/recommended',
   ],
   env: {
-    'jest/globals': true,
+    jest: true,
     browser: true,
     es6: true,
     node: true,
@@ -30,6 +30,7 @@ module.exports = {
     ecmaVersion: 2022,
     sourceType: 'module',
   },
+  ignorePatterns: ['node_modules', 'packages/*/lib'],
   rules: {
     //---------------------------------------------
     // eslint
