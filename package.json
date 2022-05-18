@@ -2,7 +2,7 @@
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@3.2.0",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
