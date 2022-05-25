@@ -96,6 +96,8 @@ module.exports = {
     'import/newline-after-import': 'error', // make sure of a newline after import
     'import/no-duplicates': 'error', // auto-fix merge into single line
     'import/extensions': 'error', // Ensure consistent use of file extension within the import path.
+    'import/no-useless-path-segments': 'error', // Prevent unnecessary path segments in import and require statements. (autofix)
+    'import/no-commonjs': 'error', // Report CommonJS require calls and module.exports or exports.*.
     'import/newline-after-import': 'error', // Require a newline after the last import/require in a group
     'import/no-absolute-path': 'error', // Forbid import of modules using absolute paths
     'import/no-amd': 'error', // disallow AMD require/define
@@ -118,6 +120,19 @@ module.exports = {
     'import/order': 'off', // use the simple-import-sort instead
     'import/prefer-default-export': 'off', // we want everything to be named
 
+    //---------------------------------------------
+    // eslint-plugin-node (setup for esm transition)
+    //
+    'node/no-missing-import': 'error', // disallow import declarations which import non-existence modules
+    'node/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
+    'node/file-extension-in-import': 'error', // enforce the style of file extensions in import declarations (autofix)
+
+    //---------------------------------------------
+    // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
+    //
+    'unicorn/prefer-module': 'error', // Prefer JavaScript modules (ESM) over CommonJS. (autofix)
+    'unicorn/prefer-node-protocol': 'error', // Prefer using the node: protocol when importing Node.js builtin modules.
+    'unicorn/prefer-top-level-await': 'error', // Prefer top-level await over top-level promises and async function calls.
 
     //---------------------------------------------
     // eslint-plugin-eslint-comment
@@ -130,16 +145,11 @@ module.exports = {
         allowWholeFile: true,
       },
     ],
-    // disallow a eslint-enable comment for multiple eslint-disable comments
-    'eslint-comments/no-aggregating-enable': 'error',
-    // disallow duplicate eslint-disable comments
-    'eslint-comments/no-duplicate-disable': 'error',
-    // disallow eslint-disable comments without rule names - default generated in apollo
-    'eslint-comments/no-unlimited-disable': 'off',
-    // disallow unused eslint-disable comments
-    'eslint-comments/no-unused-disable': 'error',
-    // disallow unused eslint-enable comments
-    'eslint-comments/no-unused-enable': 'error',
+    'eslint-comments/no-aggregating-enable': 'error', // disallow a eslint-enable comment for multiple eslint-disable comments
+    'eslint-comments/no-duplicate-disable': 'error', // disallow duplicate eslint-disable comments
+    'eslint-comments/no-unlimited-disable': 'off', // disallow eslint-disable comments without rule names - default generated in apollo
+    'eslint-comments/no-unused-disable': 'error', // disallow unused eslint-disable comments
+    'eslint-comments/no-unused-enable': 'error', // disallow unused eslint-enable comments
     // disallow ESLint directive-comments
     'eslint-comments/no-use': [
       'error',

@@ -2,7 +2,7 @@
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@3.2.0",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -44,8 +44,10 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.2.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0"
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unicorn": "^42.0.0"
   },
   "devDependencies": {
     "@alienfast/ci": "^7.0.35",
@@ -54,7 +56,7 @@
     "prettier": "^2.6.2"
   },
   "peerDependencies": {
-    "prettier": "*",
-    "jest": "*"
+    "jest": "*",
+    "prettier": "*"
   }
 }
