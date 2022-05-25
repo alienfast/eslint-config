@@ -5,6 +5,8 @@ module.exports = {
     'eslint-comments',
     'simple-import-sort',
     'import',
+    'node',
+    'unicorn',
     'jest',
   ],
   extends: [
@@ -26,6 +28,7 @@ module.exports = {
   },
   parserOptions: {
     project: './tsconfig.lint.json',
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   ignorePatterns: ['node_modules', 'packages/*/lib'],
