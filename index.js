@@ -3,8 +3,8 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'eslint-comments',
-    'import',
     'simple-import-sort',
+    'import',
     'jest',
   ],
   extends: [
@@ -19,14 +19,13 @@ module.exports = {
     'plugin:jest/recommended',
   ],
   env: {
-    jest: true,
-    browser: true,
-    es6: true,
-    node: true,
+    es2022: true, // adds all ECMAScript 2022 globals and automatically sets the ecmaVersion parser option to 13.
+    jest: true, // adds Jest global variables.
+    browser: true, // adds browser global variables.
+    node: true, // adds Node.js global variables and Node.js scoping.
   },
   parserOptions: {
     project: './tsconfig.lint.json',
-    ecmaVersion: 2022,
     sourceType: 'module',
   },
   ignorePatterns: ['node_modules', 'packages/*/lib'],
@@ -46,7 +45,7 @@ module.exports = {
     // note you must disable the base rule as it can report incorrect errors
     'require-await': 'off',
     'sort-keys': 'off', // just too painful with css class ordering to have to ignore most files
-    'sort-imports': 'off',
+    'sort-imports': 'off', // use simple-import-sort instead
 
     //---------------------------------------------
     // typescript-eslint
@@ -85,19 +84,22 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error',
 
     //---------------------------------------------
+    // simple-import-sort
+    //
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+
+    //---------------------------------------------
     // eslint-plugin-import
     //
-
-    // disallow non-import statements appearing before import statements
-    'import/first': 'error',
-    // Require a newline after the last import/require in a group
-    'import/newline-after-import': 'error',
-    // Forbid import of modules using absolute paths
-    'import/no-absolute-path': 'error',
-    // disallow AMD require/define
-    'import/no-amd': 'error',
-    // forbid default exports
-    'import/no-default-export': 'error',
+    'import/first': 'error', // disallow non-import statements appearing before import statements
+    'import/newline-after-import': 'error', // make sure of a newline after import
+    'import/no-duplicates': 'error', // auto-fix merge into single line
+    'import/extensions': 'error', // Ensure consistent use of file extension within the import path.
+    'import/newline-after-import': 'error', // Require a newline after the last import/require in a group
+    'import/no-absolute-path': 'error', // Forbid import of modules using absolute paths
+    'import/no-amd': 'error', // disallow AMD require/define
+    'import/no-default-export': 'error', // forbid default exports (more difficult to import, rename, etc)
     // Forbid the use of extraneous packages
     'import/no-extraneous-dependencies': [
       'error',
@@ -107,20 +109,15 @@ module.exports = {
         optionalDependencies: false,
       },
     ],
-    // Forbid mutable exports
-    'import/no-mutable-exports': 'error',
-    // not needed - ts does this
-    'import/named': 'off',
-    // Prevent importing the default as if it were named
-    'import/no-named-default': 'off',
-    // Prohibit named exports
-    'import/no-named-export': 'off', // we want everything to be a named export
-    // Forbid a module from importing itself
-    'import/no-self-import': 'error',
-    // use the simple sort plugin instead
-    'import/order': 'off',
-    // Require modules with a single export to use a default export
+    
+    'import/no-mutable-exports': 'error', // Forbid mutable exports
+    'import/named': 'off', // not needed - ts does this
+    'import/no-named-default': 'off', // Prevent importing the default as if it were named
+    'import/no-named-export': 'off', // Prohibit named exports, we want everything to be a named export
+    'import/no-self-import': 'error', // Forbid a module from importing itself
+    'import/order': 'off', // use the simple-import-sort instead
     'import/prefer-default-export': 'off', // we want everything to be named
+
 
     //---------------------------------------------
     // eslint-plugin-eslint-comment
