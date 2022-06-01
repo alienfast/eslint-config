@@ -5,7 +5,7 @@ module.exports = {
     'eslint-comments',
     'simple-import-sort',
     'import',
-    'node',
+    'n',
     'unicorn',
     'jest',
   ],
@@ -126,9 +126,9 @@ module.exports = {
     //---------------------------------------------
     // eslint-plugin-node (setup for esm transition)
     //
-    'node/no-missing-import': 'error', // disallow import declarations which import non-existence modules
-    'node/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
-    'node/file-extension-in-import': 'error', // enforce the style of file extensions in import declarations (autofix)
+    'n/no-missing-import': 'error', // disallow import declarations which import non-existence modules
+    'n/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
+    'n/file-extension-in-import': 'error', // enforce the style of file extensions in import declarations (autofix)
 
     //---------------------------------------------
     // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
