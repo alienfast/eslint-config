@@ -12,6 +12,7 @@ jobs:
           key: eslint-all-branches
       - run: ncu -u
       - run: yarn install
+      - run: yarn test
       - save_cache:
           key: eslint-all-branches-{{ epoch }}
           paths:

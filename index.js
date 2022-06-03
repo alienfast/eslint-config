@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-commonjs, unicorn/prefer-module
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -13,7 +14,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    "plugin:prettier/recommended",
+    'plugin:prettier/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/react',
@@ -89,14 +90,13 @@ module.exports = {
     //---------------------------------------------
     // simple-import-sort
     //
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
 
     //---------------------------------------------
     // eslint-plugin-import
     //
     'import/first': 'error', // disallow non-import statements appearing before import statements
-    'import/newline-after-import': 'error', // make sure of a newline after import
     'import/no-duplicates': 'error', // auto-fix merge into single line
     'import/extensions': 'error', // Ensure consistent use of file extension within the import path.
     'import/no-useless-path-segments': 'error', // Prevent unnecessary path segments in import and require statements. (autofix)
@@ -114,7 +114,7 @@ module.exports = {
         optionalDependencies: false,
       },
     ],
-    
+
     'import/no-mutable-exports': 'error', // Forbid mutable exports
     'import/named': 'off', // not needed - ts does this
     'import/no-named-default': 'off', // Prevent importing the default as if it were named
