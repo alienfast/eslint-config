@@ -96,6 +96,7 @@ module.exports = {
     //---------------------------------------------
     // eslint-plugin-import
     //
+    'import/no-unresolved': 'off', // does not work with file extensions
     'import/first': 'error', // disallow non-import statements appearing before import statements
     'import/no-duplicates': 'error', // auto-fix merge into single line
     'import/extensions': 'error', // Ensure consistent use of file extension within the import path.
@@ -126,9 +127,9 @@ module.exports = {
     //---------------------------------------------
     // eslint-plugin-node (setup for esm transition)
     //
-    'n/no-missing-import': 'error', // disallow import declarations which import non-existence modules
+    'n/no-missing-import': 'off', // disallow import declarations which import non-existence modules - does not work with file extensions in ts, needs updated like the file-extensions rule
     'n/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
-    'n/file-extension-in-import': 'off', // enforce the style of file extensions in import declarations (autofix) - only good for initial fixing, otherwise errors on some paths https://github.com/weiran-zsd/eslint-plugin-node/issues/21 
+    'n/file-extension-in-import': 'off', // enforce the style of file extensions in import declarations (autofix) - only good for initial fixing, otherwise errors on some paths https://github.com/weiran-zsd/eslint-plugin-node/issues/21
 
     //---------------------------------------------
     // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
