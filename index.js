@@ -128,7 +128,7 @@ module.exports = {
     //
     'n/no-missing-import': 'error', // disallow import declarations which import non-existence modules
     'n/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
-    'n/file-extension-in-import': 'error', // enforce the style of file extensions in import declarations (autofix)
+    'n/file-extension-in-import': 'off', // enforce the style of file extensions in import declarations (autofix) - only good for initial fixing, otherwise errors on some paths https://github.com/weiran-zsd/eslint-plugin-node/issues/21 
 
     //---------------------------------------------
     // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
