@@ -96,7 +96,7 @@ module.exports = {
     //---------------------------------------------
     // eslint-plugin-import
     //
-    'import/no-unresolved': 'off', // does not work with file extensions
+    'import/no-unresolved': 'error', // does not work with file extensions as of 6/8/2022
     'import/first': 'error', // disallow non-import statements appearing before import statements
     'import/no-duplicates': 'error', // auto-fix merge into single line
     'import/extensions': 'error', // Ensure consistent use of file extension within the import path.
