@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": ["index.js"]
+}

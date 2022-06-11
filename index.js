@@ -1,34 +1,43 @@
+// eslint-disable-next-line import/no-commonjs, unicorn/prefer-module
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'eslint-comments', 'import', 'simple-import-sort', 'jest'],
+  plugins: [
+    '@typescript-eslint',
+    'eslint-comments',
+    'simple-import-sort',
+    'import',
+    'n',
+    'unicorn',
+    'jest',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/react',
     'plugin:import/typescript',
     'plugin:jest/recommended',
+    'plugin:react-hooks/recommended',
   ],
   env: {
-    'jest/globals': true,
-    browser: true,
-    es6: true,
-    node: true,
+    es2022: true, // adds all ECMAScript 2022 globals and automatically sets the ecmaVersion parser option to 13.
+    jest: true, // adds Jest global variables.
+    browser: true, // adds browser global variables.
+    node: true, // adds Node.js global variables and Node.js scoping.
   },
   parserOptions: {
     project: './tsconfig.lint.json',
-    ecmaVersion: 2018,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  ignorePatterns: ['node_modules', 'packages/*/lib'],
   rules: {
     //---------------------------------------------
     // eslint
     //
-    'arrow-parens': ['error', 'as-needed'],
     'guard-for-in': 'error',
     'no-bitwise': 'error',
     'no-caller': 'error',
@@ -41,7 +50,7 @@ module.exports = {
     // note you must disable the base rule as it can report incorrect errors
     'require-await': 'off',
     'sort-keys': 'off', // just too painful with css class ordering to have to ignore most files
-    'sort-imports': 'off',
+    'sort-imports': 'off', // use simple-import-sort instead
 
     //---------------------------------------------
     // typescript-eslint
@@ -80,19 +89,24 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error',
 
     //---------------------------------------------
+    // simple-import-sort
+    //
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+
+    //---------------------------------------------
     // eslint-plugin-import
     //
-
-    // disallow non-import statements appearing before import statements
-    'import/first': 'error',
-    // Require a newline after the last import/require in a group
-    'import/newline-after-import': 'error',
-    // Forbid import of modules using absolute paths
-    'import/no-absolute-path': 'error',
-    // disallow AMD require/define
-    'import/no-amd': 'error',
-    // forbid default exports
-    'import/no-default-export': 'error',
+    'import/no-unresolved': 'error', // does not work with file extensions as of 6/8/2022
+    'import/first': 'error', // disallow non-import statements appearing before import statements
+    'import/no-duplicates': 'error', // auto-fix merge into single line
+    'import/extensions': 'error', // Ensure consistent use of file extension within the import path.
+    'import/no-useless-path-segments': 'error', // Prevent unnecessary path segments in import and require statements. (autofix)
+    'import/no-commonjs': 'error', // Report CommonJS require calls and module.exports or exports.*.
+    'import/newline-after-import': 'error', // Require a newline after the last import/require in a group
+    'import/no-absolute-path': 'error', // Forbid import of modules using absolute paths
+    'import/no-amd': 'error', // disallow AMD require/define
+    'import/no-default-export': 'error', // forbid default exports (more difficult to import, rename, etc)
     // Forbid the use of extraneous packages
     'import/no-extraneous-dependencies': [
       'error',
@@ -102,20 +116,28 @@ module.exports = {
         optionalDependencies: false,
       },
     ],
-    // Forbid mutable exports
-    'import/no-mutable-exports': 'error',
-    // not needed - ts does this
-    'import/named': 'off',
-    // Prevent importing the default as if it were named
-    'import/no-named-default': 'off',
-    // Prohibit named exports
-    'import/no-named-export': 'off', // we want everything to be a named export
-    // Forbid a module from importing itself
-    'import/no-self-import': 'error',
-    // use the simple sort plugin instead
-    'import/order': 'off',
-    // Require modules with a single export to use a default export
+
+    'import/no-mutable-exports': 'error', // Forbid mutable exports
+    'import/named': 'off', // not needed - ts does this
+    'import/no-named-default': 'off', // Prevent importing the default as if it were named
+    'import/no-named-export': 'off', // Prohibit named exports, we want everything to be a named export
+    'import/no-self-import': 'error', // Forbid a module from importing itself
+    'import/order': 'off', // use the simple-import-sort instead
     'import/prefer-default-export': 'off', // we want everything to be named
+
+    //---------------------------------------------
+    // eslint-plugin-node (setup for esm transition)
+    //
+    'n/no-missing-import': 'off', // disallow import declarations which import non-existence modules - does not work with file extensions in ts, needs updated like the file-extensions rule
+    'n/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
+    'n/file-extension-in-import': 'off', // enforce the style of file extensions in import declarations (autofix) - only good for initial fixing, otherwise errors on some paths https://github.com/weiran-zsd/eslint-plugin-node/issues/21
+
+    //---------------------------------------------
+    // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
+    //
+    'unicorn/prefer-module': 'error', // Prefer JavaScript modules (ESM) over CommonJS. (autofix)
+    'unicorn/prefer-node-protocol': 'error', // Prefer using the node: protocol when importing Node.js builtin modules.
+    'unicorn/prefer-top-level-await': 'error', // Prefer top-level await over top-level promises and async function calls.
 
     //---------------------------------------------
     // eslint-plugin-eslint-comment
@@ -128,16 +150,11 @@ module.exports = {
         allowWholeFile: true,
       },
     ],
-    // disallow a eslint-enable comment for multiple eslint-disable comments
-    'eslint-comments/no-aggregating-enable': 'error',
-    // disallow duplicate eslint-disable comments
-    'eslint-comments/no-duplicate-disable': 'error',
-    // disallow eslint-disable comments without rule names - default generated in apollo
-    'eslint-comments/no-unlimited-disable': 'off',
-    // disallow unused eslint-disable comments
-    'eslint-comments/no-unused-disable': 'error',
-    // disallow unused eslint-enable comments
-    'eslint-comments/no-unused-enable': 'error',
+    'eslint-comments/no-aggregating-enable': 'error', // disallow a eslint-enable comment for multiple eslint-disable comments
+    'eslint-comments/no-duplicate-disable': 'error', // disallow duplicate eslint-disable comments
+    'eslint-comments/no-unlimited-disable': 'off', // disallow eslint-disable comments without rule names - default generated in apollo
+    'eslint-comments/no-unused-disable': 'error', // disallow unused eslint-disable comments
+    'eslint-comments/no-unused-enable': 'error', // disallow unused eslint-enable comments
     // disallow ESLint directive-comments
     'eslint-comments/no-use': [
       'error',
