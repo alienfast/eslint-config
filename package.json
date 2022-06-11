@@ -45,16 +45,17 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.5.3",
-    "eslint-plugin-n": "^15.2.1",
+    "eslint-plugin-n": "^15.2.2",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unicorn": "^42.0.0"
   },
   "devDependencies": {
-    "@alienfast/ci": "^7.0.35",
+    "@alienfast/ci": "^8.0.7",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
-    "lint-staged": "^13.0.0",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.6.2",
     "typescript": "^4.7.3"
   },

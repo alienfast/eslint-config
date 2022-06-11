@@ -4,24 +4,18 @@ jobs:
       ignore:
         - master
     docker:
-      - image: alienfast/ci-node:5.1
+      - image: alienfast/ci-node:6.0
     steps:
       - checkout
       - add_ssh_keys
-      - restore_cache:
-          key: eslint-all-branches
       - run: ncu -u
       - run: yarn install
       - run: yarn test
-      - save_cache:
-          key: eslint-all-branches-{{ epoch }}
-          paths:
-            - .eslintcache
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ];
               then \
-                 yarn run releaseAuto && npm publish
+                 yarn releaseAuto && yarn npm publish
             fi
           name: Release and publish
     working_directory: ~/project
