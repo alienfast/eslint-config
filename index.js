@@ -107,7 +107,7 @@ module.exports = {
     'import/newline-after-import': 'error', // Require a newline after the last import/require in a group
     'import/no-absolute-path': 'error', // Forbid import of modules using absolute paths
     'import/no-amd': 'error', // disallow AMD require/define
-    'import/no-default-export': 'error', // forbid default exports (more difficult to import, rename, etc)
+    'import/no-default-export': 'off', // forbid default exports (more difficult to import, rename, etc), but onerous on the whole with stories, routes etc
     // Forbid the use of extraneous packages
     'import/no-extraneous-dependencies': [
       'error',
