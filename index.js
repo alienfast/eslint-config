@@ -55,6 +55,7 @@ module.exports = {
     //---------------------------------------------
     // typescript-eslint
     //
+    '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
     '@typescript-eslint/camelcase': 'off', // apollo generated files
     '@typescript-eslint/explicit-function-return-type': 'off',
