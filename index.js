@@ -21,6 +21,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jest/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
   env: {
     es2022: true, // adds all ECMAScript 2022 globals and automatically sets the ecmaVersion parser option to 13.
