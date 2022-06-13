@@ -6,6 +6,7 @@ module.exports = {
     'eslint-comments',
     'simple-import-sort',
     'import',
+    'unused-imports',
     'n',
     'unicorn',
     'jest',
@@ -128,7 +129,17 @@ module.exports = {
     'import/prefer-default-export': 'off', // we want everything to be named
 
     //---------------------------------------------
-    // eslint-plugin-node (setup for esm transition)
+    // eslint-plugin-unused-imports
+    //
+    // 'no-unused-vars': 'off', // or "@typescript-eslint/no-unused-vars": "off",
+    'unused-imports/no-unused-imports': 'error',
+    // 'unused-imports/no-unused-vars': [
+    //   'warn',
+    //   { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    // ],
+
+    //---------------------------------------------
+    // eslint-plugin-node (use this to setup for esm transition)
     //
     'n/no-missing-import': 'off', // disallow import declarations which import non-existence modules - does not work with file extensions in ts, needs updated like the file-extensions rule
     'n/no-extraneous-import': 'error', // disallow import declarations which import extraneous modules
