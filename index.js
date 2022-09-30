@@ -9,7 +9,6 @@ module.exports = {
     'unused-imports',
     'n',
     'unicorn',
-    'jest',
   ],
   extends: [
     'eslint:recommended',
@@ -20,13 +19,11 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/react',
     'plugin:import/typescript',
-    'plugin:jest/recommended',
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
   ],
   env: {
     es2022: true, // adds all ECMAScript 2022 globals and automatically sets the ecmaVersion parser option to 13.
-    jest: true, // adds Jest global variables.
     browser: true, // adds browser global variables.
     node: true, // adds Node.js global variables and Node.js scoping.
   },
