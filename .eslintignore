@@ -8,10 +8,6 @@ rollup.config.js
 typings-local
 typings
 
-jest.config.js
-jest.config.settings.js
-jest.config.base.js
-
 .babel.config.js
 .eslintrc.js
 .pnp*

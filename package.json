@@ -2,7 +2,7 @@
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@3.2.0",
-  "version": "3.0.25",
+  "version": "3.0.26",
   "license": "UNLICENSED",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -38,31 +38,28 @@
     ]
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "eslint": "^8.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^26.8.2",
-    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-storybook": "^0.6.4",
     "eslint-plugin-unicorn": "^43.0.2",
     "eslint-plugin-unused-imports": "^2.0.0"
   },
   "devDependencies": {
-    "@alienfast/ci": "^8.0.22",
+    "@alienfast/ci": "^8.0.27",
     "husky": "^8.0.1",
-    "jest": "^28.1.3",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.4"
   },
   "peerDependencies": {
-    "jest": "*",
     "prettier": "*"
   }
 }
