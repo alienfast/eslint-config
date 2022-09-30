@@ -9,7 +9,8 @@ jobs:
       - checkout
       - add_ssh_keys
       - run: ncu -u
-      - run: yarn install
+      # allow the lock file to change
+      - run: yarn install --no-immutable
       - run: yarn test
       - deploy:
           command: |
