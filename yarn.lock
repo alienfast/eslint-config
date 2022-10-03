@@ -95,8 +95,8 @@ __metadata:
   resolution: "@alienfast/eslint-config@workspace:."
   dependencies:
     "@alienfast/ci": ^8.0.27
-    "@typescript-eslint/eslint-plugin": ^5.38.1
-    "@typescript-eslint/parser": ^5.38.1
+    "@typescript-eslint/eslint-plugin": ^5.39.0
+    "@typescript-eslint/parser": ^5.39.0
     eslint: ^8.24.0
     eslint-config-prettier: ^8.5.0
     eslint-import-resolver-typescript: ^3.5.1
@@ -495,7 +495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.38.1":
+"@typescript-eslint/eslint-plugin@npm:^5.39.0":
   version: 5.39.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.39.0"
   dependencies:
@@ -528,7 +528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.38.1":
+"@typescript-eslint/parser@npm:^5.39.0":
   version: 5.39.0
   resolution: "@typescript-eslint/parser@npm:5.39.0"
   dependencies:
