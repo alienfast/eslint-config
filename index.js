@@ -28,15 +28,21 @@ module.exports = {
     node: true, // adds Node.js global variables and Node.js scoping.
   },
   parserOptions: {
-    project: './tsconfig.lint.json',
+    project: [
+      './tsconfig.lint.json', // for config files etc *outside* of src directories
+      './packages/*/tsconfig.json', // all code *in* src directories
+    ],
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   ignorePatterns: ['node_modules', 'packages/*/lib'],
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       typescript: {
-        project: ['packages/*/tsconfig.json'],
+        project: ['packages/*/tsconfig.json'], // only add tsconfig path resolution from the projects, not root/config tsconfig.
       },
     },
   },
