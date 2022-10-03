@@ -30,7 +30,7 @@ module.exports = {
   parserOptions: {
     project: [
       './tsconfig.lint.json', // for config files etc *outside* of src directories
-      './packages/*/tsconfig.json' // all code *in* src directories
+      './packages/*/tsconfig.json', // all code *in* src directories
     ],
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -38,7 +38,7 @@ module.exports = {
   ignorePatterns: ['node_modules', 'packages/*/lib'],
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       typescript: {
