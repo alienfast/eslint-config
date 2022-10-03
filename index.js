@@ -33,6 +33,13 @@ module.exports = {
     sourceType: 'module',
   },
   ignorePatterns: ['node_modules', 'packages/*/lib'],
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: ['packages/*/tsconfig.json'],
+      },
+    },
+  },
   rules: {
     //---------------------------------------------
     // eslint
