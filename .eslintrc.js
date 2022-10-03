@@ -3,5 +3,5 @@ module.exports = {
   parserOptions: {
     createDefaultProgram: true, // fix parser complaint
     project: ['./tsconfig.lint.json'],
-  },
+  }
 }
