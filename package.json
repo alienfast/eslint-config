@@ -3,14 +3,8 @@
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@3.2.0",
   "version": "4.0.3",
-  "license": "UNLICENSED",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alienfast/eslint-config.git"
-  },
+  "license": "MIT",
+  "repository": "https://github.com/alienfast/eslint-config",
   "main": "index.js",
   "scripts": {
     "clean:yarn": "rm -rf ./packages/*/node_modules ./packages/*/yarn.lock yarn.lock node_modules",
@@ -20,7 +14,8 @@
     "lint:check": "yarn lint:print | eslint-config-prettier-check",
     "lint:print": "eslint --print-config src/index.ts",
     "prettier": "prettier --write \"{,**/}*.{ts,tsx,js,json,md}\"",
-    "test": "yarn lint"
+    "test": "yarn lint",
+    "release": "yarn auto shipit"
   },
   "husky": {
     "hooks": {
@@ -55,6 +50,7 @@
   },
   "devDependencies": {
     "@alienfast/ci": "^8.0.27",
+    "auto": "^10.37.6",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
@@ -62,5 +58,11 @@
   },
   "peerDependencies": {
     "prettier": "*"
+  },
+  "author": "Kevin Ross <kevin.ross@alienfast.com>",
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
   }
 }
