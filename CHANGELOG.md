@@ -1,3 +1,15 @@
+# v4.0.7 (Thu Apr 27 2023)
+
+#### 🐛 Bug Fix
+
+- add auto plugins [#5](https://github.com/alienfast/eslint-config/pull/5) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v4.0.6 (Thu Apr 27 2023)
 
 #### 🐛 Bug Fix
