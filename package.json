@@ -52,6 +52,9 @@
     "eslint-plugin-unused-imports": "^2.0.0"
   },
   "devDependencies": {
+    "@auto-it/all-contributors": "^10.46.0",
+    "@auto-it/first-time-contributor": "^10.46.0",
+    "@auto-it/released": "^10.46.0",
     "auto": "^10.46.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
@@ -64,7 +67,10 @@
   "author": "Kevin Ross <kevin.ross@alienfast.com>",
   "auto": {
     "plugins": [
-      "npm"
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
     ]
   }
 }
