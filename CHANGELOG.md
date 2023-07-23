@@ -1,3 +1,15 @@
+# v4.0.9 (Sun Jul 23 2023)
+
+#### ⚠️ Pushed to `main`
+
+- ncu ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v4.0.8 (Thu Jun 29 2023)
 
 #### ⚠️ Pushed to `main`
