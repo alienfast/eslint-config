@@ -25,6 +25,7 @@ const compat = new FlatCompat({
 
 // npx @eslint/config-inspector 
 const configs = tseslint.config({
+  name: "alienfast-js",
   extends: [
       {
       name: 'eslint.configs.recommended', // name is missing and this helps with inspector
@@ -41,7 +42,6 @@ const configs = tseslint.config({
     {name: 'storybook.recommended', ...fixupConfigRules(compat.extends("plugin:storybook/recommended"))[0]},
 
   ],
-  name: "alienfast",
   plugins: {
   //     "@typescript-eslint": fixupPluginRules(typescriptEslint), don't need anymore
       "eslint-comments": eslintComments,
@@ -177,23 +177,20 @@ const configs = tseslint.config({
 //     },
 },
 { 
-  name: 'alienfast-files',
-  files: ['**/*.{ts,tsx,mts,cts,js,mjs,json,md}'],
-
+  name: 'alienfast-js-files',
+  files: ['**/*.{ts,tsx,mts,cts,js,mjs,cjs}'], 
 },
 {
-  name: 'alienfast-ignores',
+  name: 'alienfast-js-ignores',
     ignores: [
-  //     "packages/*/lib",
-  //     "packages/*/dist",
-  //     "packages/ci/cra",
-  //     "packages/ci/test",
-  //     "**/typings-local",
-  //     "**/typings",
-  //     "**/.pnp*",
-      // ".yarn", // !!!!!!!!!
+      "packages/*/lib",
+      "./lib/",
+      "packages/*/dist",
+      "./dist/",
+      "**/typings-local",
+      "**/typings",
+      "**/.pnp*",
       "**/.yarn",  
-      // ".yarn/"
   ]
 }
 );

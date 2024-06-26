@@ -3,7 +3,7 @@ import tseslint from 'typescript-eslint'
 // import { fileURLToPath } from "node:url";
 // import js from "@eslint/js";
 // import { FlatCompat } from "@eslint/eslintrc";
-import localConfig from "./index.js";
+import configs from "./src/index.js";
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
@@ -14,19 +14,12 @@ import localConfig from "./index.js";
 // });
 
 export default tseslint.config({
-    
+    name: "project-js",
     extends: [
-        ...localConfig,  
+        ...configs.js,  
     ],
     
 
-    name: "project config",
-    ignores: [
-        '**/.yarn/**'
-    ],
-    // files: ["index.js"],
-
-    // ignores: [ "./scripts/**.js" ],    
     languageOptions: {
         // ecmaVersion: 5,
         // sourceType: "script",
@@ -36,5 +29,10 @@ export default tseslint.config({
             project: ["./tsconfig.lint.json"],
         },
     
-}}
+    }},
+{ 
+    name: 'project-other', 
+    extends: [...configs.other]
+}
+
 );

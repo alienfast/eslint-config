@@ -5,5 +5,5 @@
     "noEmit": true,
     "allowJs": true
   },
-  "include": ["index.js"]
+  "include": ["src/**.js", "scripts/**/*.js"],
 }

@@ -11,7 +11,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./index.js"
+      "import": "./src/index.js"
     },
     "./package.json": "./package.json"
   },
