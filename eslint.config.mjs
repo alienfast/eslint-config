@@ -1,3 +1,4 @@
+import tseslint from 'typescript-eslint'
 // import path from "node:path";
 // import { fileURLToPath } from "node:url";
 // import js from "@eslint/js";
@@ -12,12 +13,18 @@ import localConfig from "./index.js";
 //     allConfig: js.configs.all
 // });
 
-export default [
-    ...localConfig,  
-    {
+export default tseslint.config({
+    
+    extends: [
+        ...localConfig,  
+    ],
+    
 
-        name: "project config",
-   files: ["index.js"],
+    name: "project config",
+    ignores: [
+        '**/.yarn/**'
+    ],
+    // files: ["index.js"],
 
     // ignores: [ "./scripts/**.js" ],    
     languageOptions: {
@@ -28,6 +35,6 @@ export default [
             // createDefaultProgram: true,
             project: ["./tsconfig.lint.json"],
         },
-    },
-}
-];
+    
+}}
+);

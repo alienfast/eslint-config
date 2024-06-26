@@ -26,45 +26,31 @@ const compat = new FlatCompat({
 // npx @eslint/config-inspector 
 const configs = tseslint.config({
   extends: [
-   {
-  name: 'eslint.configs.recommended', // name is missing and this helps with inspector
-  ...eslint.configs.recommended
-}, // Recommended config applied to all files
-...tseslint.configs.recommended,
-...tseslint.configs.recommendedTypeChecked,
-{name: 'prettier.recommended', ...eslintPluginPrettierRecommended},
-{name: 'import.errors', ...fixupConfigRules(compat.extends("plugin:import/errors"))[0]},
-{name: 'import.warnings', ...fixupConfigRules(compat.extends("plugin:import/warnings"))[0]},
-{name: 'import.react', ...fixupConfigRules(compat.extends("plugin:import/react"))[0]},
-{name: 'import.typescript', ...fixupConfigRules(compat.extends("plugin:import/typescript"))[0]},
-{name: 'react-hooks.recommended', ...fixupConfigRules(compat.extends("plugin:react-hooks/recommended"))[0]},
-{name: 'storybook.recommended', ...fixupConfigRules(compat.extends("plugin:storybook/recommended"))[0]},
+      {
+      name: 'eslint.configs.recommended', // name is missing and this helps with inspector
+      ...eslint.configs.recommended
+    }, // Recommended config applied to all files
+    ...tseslint.configs.recommended,
+    ...tseslint.configs.recommendedTypeChecked,
+    {name: 'prettier.recommended', ...eslintPluginPrettierRecommended},
+    {name: 'import.errors', ...fixupConfigRules(compat.extends("plugin:import/errors"))[0]},
+    {name: 'import.warnings', ...fixupConfigRules(compat.extends("plugin:import/warnings"))[0]},
+    {name: 'import.react', ...fixupConfigRules(compat.extends("plugin:import/react"))[0]},
+    {name: 'import.typescript', ...fixupConfigRules(compat.extends("plugin:import/typescript"))[0]},
+    {name: 'react-hooks.recommended', ...fixupConfigRules(compat.extends("plugin:react-hooks/recommended"))[0]},
+    {name: 'storybook.recommended', ...fixupConfigRules(compat.extends("plugin:storybook/recommended"))[0]},
 
   ],
   name: "alienfast",
-   files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.json", "**/*.md"
-    ],
-    ignores: [
-        "packages/*/lib",
-        "packages/*/dist",
-        "packages/ci/cra",
-        "packages/ci/test",
-        "**/typings-local",
-        "**/typings",
-        "**/.pnp*",
-        ".yarn", // !!!!!!!!!
-        "**/.yarn",  
-        ".yarn/**"
-    ],
-    plugins: {
-    //     "@typescript-eslint": fixupPluginRules(typescriptEslint), don't need anymore
-        "eslint-comments": eslintComments,
-        "simple-import-sort": simpleImportSort,
-        import: fixupPluginRules(_import),
-        "unused-imports": unusedImports,
-        n,
-        unicorn,
-    }
+  plugins: {
+  //     "@typescript-eslint": fixupPluginRules(typescriptEslint), don't need anymore
+      "eslint-comments": eslintComments,
+      "simple-import-sort": simpleImportSort,
+      import: fixupPluginRules(_import),
+      "unused-imports": unusedImports,
+      n,
+      unicorn,
+  }
 
 //     languageOptions: {
 //         globals: {
@@ -189,6 +175,26 @@ const configs = tseslint.config({
 //             ],
 //         }],
 //     },
+},
+{ 
+  name: 'alienfast-files',
+  files: ['**/*.{ts,tsx,mts,cts,js,mjs,json,md}'],
+
+},
+{
+  name: 'alienfast-ignores',
+    ignores: [
+  //     "packages/*/lib",
+  //     "packages/*/dist",
+  //     "packages/ci/cra",
+  //     "packages/ci/test",
+  //     "**/typings-local",
+  //     "**/typings",
+  //     "**/.pnp*",
+      // ".yarn", // !!!!!!!!!
+      "**/.yarn",  
+      // ".yarn/"
+  ]
 }
 );
 
