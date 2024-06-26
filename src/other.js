@@ -16,7 +16,7 @@ const configs = tseslint.config(
 },
 {
   name: 'alienfast-other-ignores',
-    ignores: []
+    ignores: ['**/*.{ts,tsx,mts,cts,js,mjs,cjs}']
 }
 );
 
