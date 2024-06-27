@@ -33,7 +33,6 @@ const configs = tseslint.config({
     }, // Recommended config applied to all files
     ...tseslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
-    {name: 'prettier.recommended', ...eslintPluginPrettierRecommended},
     {name: 'import.errors', ...fixupConfigRules(compat.extends("plugin:import/errors"))[0]},
     {name: 'import.warnings', ...fixupConfigRules(compat.extends("plugin:import/warnings"))[0]},
     {name: 'import.react', ...fixupConfigRules(compat.extends("plugin:import/react"))[0]},
@@ -182,17 +181,10 @@ const configs = tseslint.config({
 },
 {
   name: 'alienfast-js-ignores',
-    ignores: [
-      "packages/*/lib",
-      "./lib/",
-      "packages/*/dist",
-      "./dist/",
-      "**/typings-local",
-      "**/typings",
-      "**/.pnp*",
-      "**/.yarn",  
-  ]
-}
+    ignores: BUILD_IGNORES
+},
+// always last so it disables rules incompatible with prettier during the process execution
+eslintPluginPrettierRecommended 
 );
 
 

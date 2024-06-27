@@ -13,23 +13,24 @@ import configs from "./src/index.js";
 //     allConfig: js.configs.all
 // });
 
-export default tseslint.config({
-    name: "project-js",
-    extends: [
-        ...configs.js,  
-    ],
+export default tseslint.config(
+    // {
+    // name: "project-js",
+    // extends: [
+    //     ...configs.js,  
+    // ],
     
 
-    languageOptions: {
-        // ecmaVersion: 5,
-        // sourceType: "script",
+    // languageOptions: {
+    //     // ecmaVersion: 5,
+    //     // sourceType: "script",
 
-        parserOptions: {
-            // createDefaultProgram: true,
-            project: ["./tsconfig.lint.json"],
-        },
+    //     parserOptions: {
+    //         // createDefaultProgram: true,
+    //         project: ["./tsconfig.lint.json"],
+    //     },
     
-    }},
+    // }},
 { 
     name: 'project-other', 
     extends: [...configs.other]
