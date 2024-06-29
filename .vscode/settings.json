@@ -6,6 +6,5 @@
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
 
-  // enable flat config files (eslint.config.*js)
   "eslint.useFlatConfig": true
 }
