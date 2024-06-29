@@ -8,3 +8,5 @@ export const BUILD_IGNORES = [
       "**/.pnp*",
       "**/.yarn",  
   ]
+
+  export const JS_FILES = ['**/*.{ts,tsx,mts,cts,js,mjs,cjs}']

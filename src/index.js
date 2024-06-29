@@ -1,12 +1,19 @@
 import js from './js.js'
-import other from './other.js'
+import json from './json.js'
+import markdown from './markdown.js'
 
 export * from './constants.js'
 
 const
      configs = {
          js,
-         other
+         json,
+         markdown,
+         recommended: [
+              ...js,
+              ...json,
+              ...markdown,
+          ],
     }
 
 export default configs

@@ -14,6 +14,7 @@ import eslint from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
 import tseslint from 'typescript-eslint'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import { BUILD_IGNORES, JS_FILES } from './constants.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -177,7 +178,7 @@ const configs = tseslint.config({
 },
 { 
   name: 'alienfast-js-files',
-  files: ['**/*.{ts,tsx,mts,cts,js,mjs,cjs}'], 
+  files: JS_FILES, 
 },
 {
   name: 'alienfast-js-ignores',

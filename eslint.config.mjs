@@ -32,8 +32,8 @@ export default tseslint.config(
     
     // }},
 { 
-    name: 'project-other', 
-    extends: [...configs.other]
+    name: 'project-json', 
+    extends: [...configs.json]
 }
 
 );
