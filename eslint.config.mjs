@@ -38,12 +38,10 @@ export default tseslint.config(
       ...configs.js,
     ],
     languageOptions: {
-      // ecmaVersion: 5,
-      // sourceType: "script",
-
       parserOptions: {
         // createDefaultProgram: true,
-        project: ['./tsconfig.lint.json'],
+        project: ['./tsconfig.json'],
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {

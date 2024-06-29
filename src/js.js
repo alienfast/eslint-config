@@ -1,7 +1,7 @@
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+// import path from 'node:path'
+// import { fileURLToPath } from 'node:url'
+import { fixupConfigRules, fixupPluginRules } from '@eslint/compat'
 
-// import { fixupConfigRules, fixupPluginRules } from '@eslint/compat'
 // import simpleImportSort from 'eslint-plugin-simple-import-sort'
 // import unicorn from 'eslint-plugin-unicorn'
 // import unusedImports from 'eslint-plugin-unused-imports'
@@ -9,7 +9,8 @@ import { fileURLToPath } from 'node:url'
 // import eslintComments from 'eslint-plugin-eslint-comments'
 // import n from 'eslint-plugin-n'
 
-import { FlatCompat } from '@eslint/eslintrc'
+import {compat, legacyPlugin } from './legacy.js'
+// import { FlatCompat } from '@eslint/eslintrc'
 import eslint from '@eslint/js'
 import _import from 'eslint-plugin-import'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
@@ -18,13 +19,19 @@ import tseslint from 'typescript-eslint'
 
 import { BUILD_IGNORES, JS_FILES, TS_FILES } from './constants.js'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: eslint.configs.recommended,
-  allConfig: eslint.configs.all,
-})
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
+// const compat = new FlatCompat({
+//   baseDirectory: __dirname,
+//   recommendedConfig: eslint.configs.recommended,
+//   allConfig: eslint.configs.all,
+// })
+
+// console.log('fixup')
+// console.log(fixupConfigRules(compat.extends('plugin:import/typescript')))
+// console.log('straight compat')
+// console.log(compat.extends('plugin:import/typescript'))
+// process.exit(0)
 
 // npx @eslint/config-inspector
 const configs = tseslint.config(
@@ -44,17 +51,19 @@ const configs = tseslint.config(
     name: 'alienfast-js',
     extends: [
       {
-        name: 'eslint.configs.recommended', // name is missing and this helps with inspector
+        // Name is missing and this helps with inspector
+        name: 'eslint.configs.recommended', 
+        // Recommended config applied to all files
         ...eslint.configs.recommended,
-      }, // Recommended config applied to all files
+      }, 
       ...tseslint.configs.recommendedTypeChecked,
-      // { name: 'import.errors', ...fixupConfigRules(compat.extends('plugin:import/errors'))[0] },
-      // { name: 'import.warnings', ...fixupConfigRules(compat.extends('plugin:import/warnings'))[0] },
-      // { name: 'import.react', ...fixupConfigRules(compat.extends('plugin:import/react'))[0] },
-      // {
-      //   name: 'import.typescript',
-      //   ...fixupConfigRules(compat.extends('plugin:import/typescript'))[0],
-      // },
+      {
+        name: 'import.typescript',
+        ...compat.extends('plugin:import/typescript')[0],
+      },
+      { name: 'import.errors', ...fixupConfigRules(compat.extends('plugin:import/errors'))[0] },
+      { name: 'import.warnings', ...fixupConfigRules(compat.extends('plugin:import/warnings'))[0] },
+      { name: 'import.react', ...fixupConfigRules(compat.extends('plugin:import/react'))[0] },
       // {
       //   name: 'react-hooks.recommended',
       //   ...fixupConfigRules(compat.extends('plugin:react-hooks/recommended'))[0],
@@ -64,43 +73,46 @@ const configs = tseslint.config(
       //   ...fixupConfigRules(compat.extends('plugin:storybook/recommended'))[0],
       // },
     ],
-    // plugins: {
-    //   'eslint-comments': eslintComments,
-    //   'simple-import-sort': simpleImportSort,
-    //   import: fixupPluginRules(_import),
-    //   'unused-imports': unusedImports,
-    //   n,
-    //   unicorn,
-    // },
-
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      // globals: {
+      //   ...globals.browser,
+      //   ...globals.node,
+      // },
 
       // parser: tsParser,
       // ecmaVersion: 'latest',
       // sourceType: 'module',
 
       parserOptions: {
-        project: true, // find the closest tsconfig file. ['./tsconfig*.json', './packages/*/tsconfig.json'],
+        // project: true, // find the closest tsconfig file. ['./tsconfig*.json', './packages/*/tsconfig.json'],
+        project: ['./tsconfig*.json', './packages/*/tsconfig.json'],        
       },
     },
 
-    // settings: {
-    //   'import/parsers': {
-    //     '@typescript-eslint/parser': TS_FILES,
-    //   },
+    settings: {
+      // https://github.com/import-js/eslint-import-resolver-typescript#configuration
+      // 'import/parsers': {
+      //   '@typescript-eslint/parser': TS_FILES,
+      // },
+      'import/resolver': {
+        typescript: {
+          alwaysTryTypes: true,
+          project: ['packages/*/tsconfig.json'],
+        },
+      },
+    },    
+    plugins: {
+      import: legacyPlugin("eslint-plugin-import", "import")
+    //   'eslint-comments': eslintComments,
+    //   'simple-import-sort': simpleImportSort,
+    //   'unused-imports': unusedImports,
+    //   n,
+    //   unicorn,
+    },
 
-    //   'import/resolver': {
-    //     typescript: {
-    //       project: ['packages/*/tsconfig.json'],
-    //     },
-    //   },
-    // },
+   
 
-    // rules: {
+    rules: {
     //   'guard-for-in': 'error',
     //   'no-bitwise': 'error',
     //   'no-caller': 'error',
@@ -210,7 +222,7 @@ const configs = tseslint.config(
     //       ],
     //     },
     //   ],
-    // },
+    },
   },
   // always last so it disables rules incompatible with prettier during the process execution
   eslintPluginPrettierRecommended,
