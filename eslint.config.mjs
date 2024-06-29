@@ -33,7 +33,21 @@ export default tseslint.config(
     // }},
 { 
     name: 'project-json', 
-    extends: [...configs.json]
+    extends: [
+        // ...configs.json, 
+        // ...configs.markdown,
+        ...configs.js,
+    ],
+        languageOptions: {
+        // ecmaVersion: 5,
+        // sourceType: "script",
+
+        parserOptions: {
+            // createDefaultProgram: true,
+            project: ["./tsconfig.lint.json"],
+        },
+    
+    }
 }
 
 );

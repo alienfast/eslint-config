@@ -9,4 +9,7 @@ export const BUILD_IGNORES = [
       "**/.yarn",  
   ]
 
-  export const JS_FILES = ['**/*.{ts,tsx,mts,cts,js,mjs,cjs}']
+  export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
+  export const JS_FILES = ['**/*.{js,mjs,cjs}']
+  export const JSON_FILES = ['**/*.json']
+  export const MD_FILES = ['**/*.md']

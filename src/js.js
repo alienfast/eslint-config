@@ -14,7 +14,7 @@ import eslint from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
 import tseslint from 'typescript-eslint'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
-import { BUILD_IGNORES, JS_FILES } from './constants.js';
+import { BUILD_IGNORES, JSON_FILES, JS_FILES, TS_FILES } from './constants.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,7 +25,19 @@ const compat = new FlatCompat({
 });
 
 // npx @eslint/config-inspector 
-const configs = tseslint.config({
+const configs = tseslint.config(
+  { 
+    name: 'alienfast-js-files',
+    files: [...JS_FILES, ...TS_FILES], 
+  },
+  {
+    name: 'alienfast-js-ignores',
+      ignores: [
+        ...BUILD_IGNORES,
+        // ...JSON_FILES,
+        // ...MD_FILES
+      ]
+  },{
   name: "alienfast-js",
   extends: [
       {
@@ -50,139 +62,131 @@ const configs = tseslint.config({
       "unused-imports": unusedImports,
       n,
       unicorn,
-  }
+  },
 
-//     languageOptions: {
-//         globals: {
-//             ...globals.browser,
-//             ...globals.node,
-//         },
+    languageOptions: {
+        globals: {
+            ...globals.browser,
+            ...globals.node,
+        },
 
-//         parser: tsParser,
-//         ecmaVersion: "latest",
-//         sourceType: "module",
+        parser: tsParser,
+        ecmaVersion: "latest",
+        sourceType: "module",
 
-//         parserOptions: {
-//             project: ["./tsconfig*.json", "./packages/*/tsconfig.json"],
-//         },
-//     },
+        parserOptions: {
+            project: ["./tsconfig*.json", "./packages/*/tsconfig.json"],
+        },
+    },
 
-//     settings: {
-//         "import/parsers": {
-//             "@typescript-eslint/parser": [".ts", ".tsx"],
-//         },
+    settings: {
+        "import/parsers": {
+            "@typescript-eslint/parser": TS_FILES,
+        },
 
-//         "import/resolver": {
-//             typescript: {
-//                 project: ["packages/*/tsconfig.json"],
-//             },
-//         },
-//     },
+        "import/resolver": {
+            typescript: {
+                project: ["packages/*/tsconfig.json"],
+            },
+        },
+    },
 
-//     rules: {
-//         "guard-for-in": "error",
-//         "no-bitwise": "error",
-//         "no-caller": "error",
-//         "no-console": "error",
-//         "no-eval": "error",
-//         "no-new-wrappers": "error",
-//         "no-throw-literal": "error",
-//         "object-shorthand": "error",
-//         "one-var": ["error", "never"],
-//         "require-await": "off",
-//         "sort-keys": "off",
-//         "sort-imports": "off",
-//         "@typescript-eslint/restrict-template-expressions": "off",
+    rules: {
+        "guard-for-in": "error",
+        "no-bitwise": "error",
+        "no-caller": "error",
+        "no-console": "error",
+        "no-eval": "error",
+        "no-new-wrappers": "error",
+        "no-throw-literal": "error",
+        "object-shorthand": "error",
+        "one-var": ["error", "never"],
+        "require-await": "off",
+        "sort-keys": "off",
+        "sort-imports": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
 
-//         "@typescript-eslint/array-type": ["error", {
-//             default: "array-simple",
-//         }],
+        "@typescript-eslint/array-type": ["error", {
+            default: "array-simple",
+        }],
 
-//         "@typescript-eslint/camelcase": "off",
-//         "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
 
-//         "@typescript-eslint/explicit-member-accessibility": ["error", {
-//             overrides: {
-//                 constructors: "no-public",
-//             },
-//         }],
+        "@typescript-eslint/explicit-member-accessibility": ["error", {
+            overrides: {
+                constructors: "no-public",
+            },
+        }],
 
-//         "@typescript-eslint/member-ordering": "error",
-//         "@typescript-eslint/no-empty-function": "off",
-//         "@typescript-eslint/no-empty-interface": "off",
-//         "@typescript-eslint/no-explicit-any": "off",
-//         "@typescript-eslint/no-misused-promises": "off",
-//         "@typescript-eslint/no-non-null-assertion": "off",
-//         "@typescript-eslint/no-unnecessary-type-assertion": "off",
-//         "@typescript-eslint/no-unused-vars": "off",
-//         "@typescript-eslint/no-use-before-define": "off",
-//         "@typescript-eslint/no-var-requires": "off",
-//         "@typescript-eslint/prefer-for-of": "error",
-//         "@typescript-eslint/prefer-function-type": "off",
-//         "@typescript-eslint/require-await": "off",
-//         "@typescript-eslint/unbound-method": "off",
-//         "@typescript-eslint/unified-signatures": "error",
-//         "simple-import-sort/imports": "error",
-//         "simple-import-sort/exports": "error",
-//         "import/no-unresolved": "error",
-//         "import/first": "error",
-//         "import/no-duplicates": "error",
-//         "import/extensions": "error",
-//         "import/no-useless-path-segments": "error",
-//         "import/no-commonjs": "error",
-//         "import/newline-after-import": "error",
-//         "import/no-absolute-path": "error",
-//         "import/no-amd": "error",
-//         "import/no-default-export": "off",
+        "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-misused-promises": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-unnecessary-type-assertion": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/prefer-for-of": "error",
+        "@typescript-eslint/prefer-function-type": "off",
+        "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/unbound-method": "off",
+        "@typescript-eslint/unified-signatures": "error",
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/no-unresolved": "error",
+        "import/first": "error",
+        "import/no-duplicates": "error",
+        "import/extensions": "error",
+        "import/no-useless-path-segments": "error",
+        "import/no-commonjs": "error",
+        "import/newline-after-import": "error",
+        "import/no-absolute-path": "error",
+        "import/no-amd": "error",
+        "import/no-default-export": "off",
 
-//         "import/no-extraneous-dependencies": ["error", {
-//             devDependencies: true,
-//             peerDependencies: true,
-//             optionalDependencies: false,
-//         }],
+        "import/no-extraneous-dependencies": ["error", {
+            devDependencies: true,
+            peerDependencies: true,
+            optionalDependencies: false,
+        }],
 
-//         "import/no-mutable-exports": "error",
-//         "import/named": "off",
-//         "import/no-named-default": "off",
-//         "import/no-named-export": "off",
-//         "import/no-self-import": "error",
-//         "import/order": "off",
-//         "import/prefer-default-export": "off",
-//         "unused-imports/no-unused-imports": "error",
-//         "n/no-missing-import": "off",
-//         "n/no-extraneous-import": "error",
-//         "n/file-extension-in-import": "off",
-//         "unicorn/prefer-module": "error",
-//         "unicorn/prefer-node-protocol": "error",
-//         "unicorn/prefer-top-level-await": "error",
+        "import/no-mutable-exports": "error",
+        "import/named": "off",
+        "import/no-named-default": "off",
+        "import/no-named-export": "off",
+        "import/no-self-import": "error",
+        "import/order": "off",
+        "import/prefer-default-export": "off",
+        "unused-imports/no-unused-imports": "error",
+        "n/no-missing-import": "off",
+        "n/no-extraneous-import": "error",
+        "n/file-extension-in-import": "off",
+        "unicorn/prefer-module": "error",
+        "unicorn/prefer-node-protocol": "error",
+        "unicorn/prefer-top-level-await": "error",
 
-//         "eslint-comments/disable-enable-pair": ["error", {
-//             allowWholeFile: true,
-//         }],
+        "eslint-comments/disable-enable-pair": ["error", {
+            allowWholeFile: true,
+        }],
 
-//         "eslint-comments/no-aggregating-enable": "error",
-//         "eslint-comments/no-duplicate-disable": "error",
-//         "eslint-comments/no-unlimited-disable": "off",
-//         "eslint-comments/no-unused-disable": "error",
-//         "eslint-comments/no-unused-enable": "error",
+        "eslint-comments/no-aggregating-enable": "error",
+        "eslint-comments/no-duplicate-disable": "error",
+        "eslint-comments/no-unlimited-disable": "off",
+        "eslint-comments/no-unused-disable": "error",
+        "eslint-comments/no-unused-enable": "error",
 
-//         "eslint-comments/no-use": ["error", {
-//             allow: [
-//                 "eslint-disable",
-//                 "eslint-disable-line",
-//                 "eslint-disable-next-line",
-//                 "eslint-enable",
-//             ],
-//         }],
-//     },
-},
-{ 
-  name: 'alienfast-js-files',
-  files: JS_FILES, 
-},
-{
-  name: 'alienfast-js-ignores',
-    ignores: BUILD_IGNORES
+        "eslint-comments/no-use": ["error", {
+            allow: [
+                "eslint-disable",
+                "eslint-disable-line",
+                "eslint-disable-next-line",
+                "eslint-enable",
+            ],
+        }],
+    },
 },
 // always last so it disables rules incompatible with prettier during the process execution
 eslintPluginPrettierRecommended 
