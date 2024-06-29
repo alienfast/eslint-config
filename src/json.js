@@ -1,8 +1,9 @@
+import json from 'eslint-plugin-json'
 import tseslint from 'typescript-eslint'
-import json from 'eslint-plugin-json';
-import { BUILD_IGNORES, JSON_FILES, JS_FILES, MD_FILES } from './constants.js';
 
-// npx @eslint/config-inspector 
+import { BUILD_IGNORES, JSON_FILES } from './constants.js'
+
+// npx @eslint/config-inspector
 const configs = tseslint.config(
   {
     name: 'alienfast-json-ignores',
@@ -10,16 +11,15 @@ const configs = tseslint.config(
       ...BUILD_IGNORES,
       // ...JS_FILES,
       // ...MD_FILES
-    ]
+    ],
   },
-  
-    {
-        name: 'alienfast-json',
-  
-      files: JSON_FILES,
-      ...json.configs["recommended"]
-    },
-);
 
+  {
+    name: 'alienfast-json',
 
-export default configs;
+    files: JSON_FILES,
+    ...json.configs['recommended'],
+  },
+)
+
+export default configs

@@ -4,16 +4,11 @@ import markdown from './markdown.js'
 
 export * from './constants.js'
 
-const
-     configs = {
-         js,
-         json,
-         markdown,
-         recommended: [
-              ...js,
-              ...json,
-              ...markdown,
-          ],
-    }
+const configs = {
+  js,
+  json,
+  markdown,
+  recommended: [...js, ...json, ...markdown],
+}
 
 export default configs
