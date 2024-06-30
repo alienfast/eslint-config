@@ -5,5 +5,5 @@
     "noEmit": true,
     "allowJs": true
   },
-  "include": ["src/**.js", "scripts/**/*.js", "*.mjs"]
+  "include": ["src/**.js", "scripts/**/*.js", "*.mjs", "src/configs/js.js", "src/configs/json.js", "src/configs/markdown.js", "src/ruleset/jsOnly.js", "src/ruleset/jsOnlyScripts.js"]
 }

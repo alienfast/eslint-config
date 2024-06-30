@@ -1,4 +1,3 @@
-/* eslint-disable no-console,@typescript-eslint/no-floating-promises */
 import { $ } from 'execa'
 import { rimraf as r } from 'rimraf'
 

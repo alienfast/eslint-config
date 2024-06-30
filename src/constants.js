@@ -10,6 +10,8 @@ export const BUILD_IGNORES = [
   '**/.yarn',
 ]
 
+export const SCRIPTS = ['scripts/**/*.js']
+
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
 export const JS_FILES = ['**/*.{js,mjs,cjs}']
 export const ALL_JS_FILES = [...JS_FILES, ...TS_FILES]

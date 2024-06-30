@@ -1,13 +1,9 @@
-import js from './js.js'
-import json from './json.js'
-import markdown from './markdown.js'
+import configs from './configs/index.js'
+import * as constants from './constants.js'
+import limits from './limits/index.js'
 
-export default {}
-export * from './constants.js'
-
-export const configs = {
-  js,
-  json,
-  markdown,
-  recommended: [...js, ...json, ...markdown],
+export default {
+  constants,
+  configs,
+  limits,
 }
