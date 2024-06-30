@@ -1,5 +1,3 @@
-// import path from 'node:path'
-// import { fileURLToPath } from 'node:url'
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat'
 import importX from 'eslint-plugin-import-x'
 
@@ -11,22 +9,13 @@ import importX from 'eslint-plugin-import-x'
 // import n from 'eslint-plugin-n'
 
 import { compat, legacyPlugin } from './legacy.js'
-// import { FlatCompat } from '@eslint/eslintrc'
 import eslint from '@eslint/js'
-// import _import from 'eslint-plugin-import'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-
+import reactHooks from 'eslint-plugin-react-hooks'
+import storybook from 'eslint-plugin-storybook'
 import { ALL_JS_FILES, BUILD_IGNORES, JS_FILES, TS_FILES } from './constants.js'
-
-// const __filename = fileURLToPath(import.meta.url)
-// const __dirname = path.dirname(__filename)
-// const compat = new FlatCompat({
-//   baseDirectory: __dirname,
-//   recommendedConfig: eslint.configs.recommended,
-//   allConfig: eslint.configs.all,
-// })
 
 // console.log('fixup')
 // console.log(fixupConfigRules(compat.extends('plugin:import/typescript')))
@@ -42,40 +31,21 @@ const configs = tseslint.config(
   },
   {
     name: 'alienfast-js-ignores',
-    ignores: [
-      ...BUILD_IGNORES,
-      // ...JSON_FILES,
-      // ...MD_FILES
-    ],
+    ignores: [...BUILD_IGNORES],
   },
   {
     name: 'alienfast-js',
     extends: [
-      {
-        // Name is missing and this helps with inspector
-        name: 'eslint.configs.recommended',
-        // Recommended config applied to all files
-        ...eslint.configs.recommended,
-      },
+      // Recommended config applied to all files
+      eslint.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
-   ...compat.config(importX.configs.recommended), // https://github.com/un-ts/eslint-plugin-import-x/issues/29#issuecomment-2148843214
-    importX.configs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
-
-      // {
-      //   name: 'import.typescript',
-      //   ...compat.extends('plugin:import/typescript')[0],
-      // },
-      // { name: 'import.errors', ...fixupConfigRules(compat.extends('plugin:import/errors'))[0] },
-      // { name: 'import.warnings', ...fixupConfigRules(compat.extends('plugin:import/warnings'))[0] },
-      // { name: 'import.react', ...fixupConfigRules(compat.extends('plugin:import/react'))[0] },
-      // {
-      //   name: 'react-hooks.recommended',
-      //   ...fixupConfigRules(compat.extends('plugin:react-hooks/recommended'))[0],
-      // },
-      // {
-      //   name: 'storybook.recommended',
+      ...compat.config(importX.configs.errors), // still has plugins: []
+      ...compat.config(importX.configs.warnings), // https://github.com/un-ts/eslint-plugin-import-x/issues/29#issuecomment-2148843214
+      ...compat.config(importX.configs.react),
+      importX.configs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
+      ...compat.config(reactHooks.configs.recommended),
+      ...compat.config(storybook.configs.recommended),
       //   ...fixupConfigRules(compat.extends('plugin:storybook/recommended'))[0],
-      // },
     ],
     languageOptions: {
       globals: {
@@ -102,12 +72,11 @@ const configs = tseslint.config(
           project: ['packages/*/tsconfig.json'],
         },
         node: {
-                        extensions: ALL_JS_FILES
-                    }
+          extensions: ALL_JS_FILES,
+        },
       },
     },
     plugins: {
-      // import: legacyPlugin('eslint-plugin-import', 'import'),
       //   'eslint-comments': eslintComments,
       //   'simple-import-sort': simpleImportSort,
       //   'unused-imports': unusedImports,

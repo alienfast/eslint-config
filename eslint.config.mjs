@@ -37,13 +37,6 @@ export default tseslint.config(
       // ...configs.markdown,
       ...configs.js,
     ],
-    // languageOptions: {
-    //   parserOptions: {
-    //     // createDefaultProgram: true,
-    //     project: ['./tsconfig.json'],
-    //     // tsconfigRootDir: import.meta.dirname,
-    //   },
-    // },
     rules: {
       '@typescript-eslint/no-unsafe-argument': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
