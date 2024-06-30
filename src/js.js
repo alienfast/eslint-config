@@ -1,21 +1,20 @@
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat'
-import importX from 'eslint-plugin-import-x'
-
-// import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import eslint from '@eslint/js'
 // import unicorn from 'eslint-plugin-unicorn'
 // import unusedImports from 'eslint-plugin-unused-imports'
 // import tsParser from '@typescript-eslint/parser'
 // import n from 'eslint-plugin-n'
-
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
-import { compat, legacyPlugin } from './legacy.js'
-import eslint from '@eslint/js'
+import importX from 'eslint-plugin-import-x'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import reactHooks from 'eslint-plugin-react-hooks'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import storybook from 'eslint-plugin-storybook'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import reactHooks from 'eslint-plugin-react-hooks'
-import storybook from 'eslint-plugin-storybook'
+
 import { ALL_JS_FILES, BUILD_IGNORES, JS_FILES, TS_FILES } from './constants.js'
+import { compat, legacyPlugin } from './legacy.js'
 
 // console.log('fixup')
 // console.log(fixupConfigRules(compat.extends('plugin:import/typescript')))
@@ -78,8 +77,7 @@ const configs = tseslint.config(
       },
     },
     plugins: {
-      //   'eslint-comments': eslintComments,
-      //   'simple-import-sort': simpleImportSort,
+      'simple-import-sort': simpleImportSort,
       //   'unused-imports': unusedImports,
       //   n,
       //   unicorn,
@@ -98,6 +96,8 @@ const configs = tseslint.config(
       'require-await': 'off',
       'sort-keys': 'off',
       'sort-imports': 'off',
+
+      //
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/array-type': [
         'error',
@@ -130,8 +130,12 @@ const configs = tseslint.config(
       '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/unified-signatures': 'error',
-      //   'simple-import-sort/imports': 'error',
-      //   'simple-import-sort/exports': 'error',
+
+      //
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+
+      //
       'import-x/no-unresolved': 'error',
       'import-x/first': 'error',
       'import-x/no-duplicates': 'error',
