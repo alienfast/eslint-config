@@ -17,6 +17,9 @@ const configs = tseslint.config(
     name: 'alienfast-json',
     files: JSON_FILES,
     ...json.configs['recommended'],
+    rules: {
+      'json/*': ['error', 'allowComments'],
+    },
   },
 )
 
