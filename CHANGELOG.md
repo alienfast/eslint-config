@@ -1,3 +1,15 @@
+# v5.1.7 (Sun Jun 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- allow comments in json ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.6 (Sun Jun 30 2024)
 
 #### ⚠️ Pushed to `main`
