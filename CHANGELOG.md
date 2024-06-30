@@ -1,3 +1,15 @@
+# v5.1.0 (Sun Jun 30 2024)
+
+#### 🚀 Enhancement
+
+- Separate limits for individual use, alter recommended to be the most common use [#7](https://github.com/alienfast/eslint-config/pull/7) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.0.0 (Sun Jun 30 2024)
 
 #### 💥 Breaking Change
