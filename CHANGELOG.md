@@ -1,3 +1,17 @@
+# v5.1.6 (Sun Jun 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- ci use latest node version ([@rosskevin](https://github.com/rosskevin))
+- increment setup node ([@rosskevin](https://github.com/rosskevin))
+- switch ci node-version to lts to avoid incrementing versions in the future ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.5 (Sun Jun 30 2024)
 
 #### ⚠️ Pushed to `main`
