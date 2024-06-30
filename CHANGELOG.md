@@ -1,3 +1,15 @@
+# v5.0.0 (Sun Jun 30 2024)
+
+#### 💥 Breaking Change
+
+- Major update to eslint 9.x [#6](https://github.com/alienfast/eslint-config/pull/6) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v4.0.9 (Sun Jul 23 2023)
 
 #### ⚠️ Pushed to `main`
