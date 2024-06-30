@@ -16,11 +16,11 @@ __metadata:
     "@eslint-community/eslint-plugin-eslint-comments": ^4.3.0
     "@eslint/compat": ^1.1.0
     "@eslint/eslintrc": ^3.1.0
-    "@eslint/js": ^9.5.0
+    "@eslint/js": ^9.6.0
     "@typescript-eslint/eslint-plugin": ^7.14.1
     "@typescript-eslint/parser": ^7.14.1
     auto: ^11.1.6
-    eslint: ^9.5.0
+    eslint: ^9.6.0
     eslint-config-prettier: ^9.1.0
     eslint-import-resolver-typescript: ^3.6.1
     eslint-plugin-import-x: ^0.5.2
@@ -34,7 +34,7 @@ __metadata:
     eslint-plugin-unicorn: ^54.0.0
     eslint-plugin-unused-imports: ^4.0.0
     execa: ^9.3.0
-    globals: ^15.6.0
+    globals: ^15.7.0
     husky: ^9.0.11
     lint-staged: ^15.2.7
     prettier: ^3.3.2
@@ -42,6 +42,7 @@ __metadata:
     typescript: ^5.5.2
     typescript-eslint: ^7.14.1
   peerDependencies:
+    eslint: "*"
     prettier: "*"
   languageName: unknown
   linkType: soft
@@ -334,7 +335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.6.0, @eslint/js@npm:^9.5.0":
+"@eslint/js@npm:9.6.0, @eslint/js@npm:^9.6.0":
   version: 9.6.0
   resolution: "@eslint/js@npm:9.6.0"
   checksum: 8d0c1cc81ae9182139a38555a56bd6387b663b45efa5ca642e1e50584926f749a68d497c8a5ca02d55661341a5b689fc7977c65b10191e2a315888ca403b8bcd
@@ -2194,7 +2195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.5.0":
+"eslint@npm:^9.6.0":
   version: 9.6.0
   resolution: "eslint@npm:9.6.0"
   dependencies:
@@ -2729,10 +2730,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.0.0, globals@npm:^15.6.0":
-  version: 15.6.0
-  resolution: "globals@npm:15.6.0"
-  checksum: 5e69c1f767beb73a11cb1959044a62fab84e0043375dedb55ea4b76d555886965b02b377698d79daae43d3d1b2ae2007b38de2d674eb61250b5886a395f59a94
+"globals@npm:^15.0.0, globals@npm:^15.7.0":
+  version: 15.7.0
+  resolution: "globals@npm:15.7.0"
+  checksum: 690080d4ba4d9f360eddc3e3e371de0d2109a00804bf7131aeb3373c75ba7095fa214ff0297d5a675ee682f936a13914122f44d1805f43eb7d40bfb53164bc7e
   languageName: node
   linkType: hard
 
@@ -4792,13 +4793,13 @@ __metadata:
   linkType: hard
 
 "string-width@npm:^7.0.0":
-  version: 7.1.0
-  resolution: "string-width@npm:7.1.0"
+  version: 7.2.0
+  resolution: "string-width@npm:7.2.0"
   dependencies:
     emoji-regex: ^10.3.0
     get-east-asian-width: ^1.0.0
     strip-ansi: ^7.1.0
-  checksum: a183573fe7209e0d294f661846d33f8caf72aa86d983e5b48a0ed45ab15bcccb02c6f0344b58b571988871105457137b8207855ea536827dbc4a376a0f31bf8f
+  checksum: 42f9e82f61314904a81393f6ef75b832c39f39761797250de68c041d8ba4df2ef80db49ab6cd3a292923a6f0f409b8c9980d120f7d32c820b4a8a84a2598a295
   languageName: node
   linkType: hard
 
