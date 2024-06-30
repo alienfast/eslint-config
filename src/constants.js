@@ -1,9 +1,9 @@
 export default {}
 export const BUILD_IGNORES = [
   'packages/*/lib',
-  './lib/',
+  'lib',
   'packages/*/dist',
-  './dist/',
+  'dist',
   '**/typings-local',
   '**/typings',
   '**/.pnp*',
