@@ -11,14 +11,14 @@ import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-import { ALL_JS_FILES, BUILD_IGNORES, JS_FILES, TS_FILES } from './constants.js'
+import { ALL_JS_FILES, BUILD_IGNORES, NOT_JS } from './constants.js'
 import { compat } from './legacy.js'
 
 // npx @eslint/config-inspector
 const configs = tseslint.config(
   {
     name: 'alienfast-js-files',
-    files: [...JS_FILES, ...TS_FILES],
+    files: [...ALL_JS_FILES],
   },
   {
     name: 'alienfast-js-ignores',
@@ -26,6 +26,7 @@ const configs = tseslint.config(
   },
   {
     name: 'alienfast-js',
+    ignores: NOT_JS,
     extends: [
       // Recommended config applied to all files
       eslint.configs.recommended,
@@ -75,6 +76,9 @@ const configs = tseslint.config(
     },
 
     rules: {
+      //---------------------------------------------
+      // eslint
+      //
       'guard-for-in': 'error',
       'no-bitwise': 'error',
       'no-caller': 'error',
@@ -84,10 +88,13 @@ const configs = tseslint.config(
       'no-throw-literal': 'error',
       'object-shorthand': 'error',
       'one-var': ['error', 'never'],
+      // note you must disable the base rule as it can report incorrect errors
       'require-await': 'off',
-      'sort-keys': 'off',
-      'sort-imports': 'off',
+      'sort-keys': 'off', // just too painful with css class ordering to have to ignore most files
+      'sort-imports': 'off', // use simple-import-sort instead
 
+      //---------------------------------------------
+      // typescript-eslint
       //
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/array-type': [
@@ -96,7 +103,7 @@ const configs = tseslint.config(
           default: 'array-simple',
         },
       ],
-      '@typescript-eslint/camelcase': 'off',
+      '@typescript-eslint/camelcase': 'off', // apollo generated files
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-member-accessibility': [
         'error',
@@ -110,7 +117,7 @@ const configs = tseslint.config(
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-empty-interface': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-misused-promises': 'off',
+      '@typescript-eslint/no-misused-promises': 'off', // costly in terms of time and not used much, even ignored where used.
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-unnecessary-type-assertion': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
@@ -119,26 +126,30 @@ const configs = tseslint.config(
       '@typescript-eslint/prefer-for-of': 'error',
       '@typescript-eslint/prefer-function-type': 'off',
       '@typescript-eslint/require-await': 'off',
-      '@typescript-eslint/unbound-method': 'off',
+      '@typescript-eslint/unbound-method': 'off', // takes 73s on js!  63% of the timing!
       '@typescript-eslint/unified-signatures': 'error',
 
+      //---------------------------------------------
+      // simple-import-sort
       //
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
 
+      //---------------------------------------------
+      // eslint-plugin-import-x
       //
-      'import-x/no-unresolved': 'error',
-      'import-x/first': 'error',
-      'import-x/no-duplicates': 'error',
-
+      'import-x/no-unresolved': 'error', // does not work with file extensions as of 6/8/2022
+      'import-x/first': 'error', // disallow non-import statements appearing before import statements
+      'import-x/no-duplicates': 'error', // auto-fix merge into single line
       // off for now, because new stuff wants extensions, old stuff doesn't have it
-      //'import-x/extensions': 'error',
-      'import-x/no-useless-path-segments': 'error',
-      'import-x/no-commonjs': 'error',
-      'import-x/newline-after-import': 'error',
-      'import-x/no-absolute-path': 'error',
-      'import-x/no-amd': 'error',
-      'import-x/no-default-export': 'off',
+      // 'import-x/extensions': 'error', // Ensure consistent use of file extension within the import path.
+      'import-x/no-useless-path-segments': 'error', // Prevent unnecessary path segments in import and require statements. (autofix)
+      'import-x/no-commonjs': 'error', // Report CommonJS require calls and module.exports or exports.*.
+      'import-x/newline-after-import': 'error', // Require a newline after the last import/require in a group
+      'import-x/no-absolute-path': 'error', // Forbid import of modules using absolute paths
+      'import-x/no-amd': 'error', // disallow AMD require/define
+      'import-x/no-default-export': 'off', // forbid default exports (more difficult to import, rename, etc), but onerous on the whole with stories, routes etc
+      // Forbid the use of extraneous packages
       'import-x/no-extraneous-dependencies': [
         'error',
         {
@@ -147,14 +158,14 @@ const configs = tseslint.config(
           optionalDependencies: false,
         },
       ],
-      'import-x/no-mutable-exports': 'error',
-      'import-x/named': 'off',
-      'import-x/no-named-default': 'off',
-      'import-x/no-named-export': 'off',
-      'import-x/no-self-import': 'error',
-      'import-x/order': 'off',
-      'import-x/prefer-default-export': 'off',
 
+      'import-x/no-mutable-exports': 'error', // Forbid mutable exports
+      'import-x/named': 'off', // not needed - ts does this
+      'import-x/no-named-default': 'off', // Prevent importing the default as if it were named
+      'import-x/no-named-export': 'off', // Prohibit named exports, we want everything to be a named export
+      'import-x/no-self-import': 'error', // Forbid a module from importing itself
+      'import-x/order': 'off', // use the simple-import-sort instead
+      'import-x/prefer-default-export': 'off', // we want everything to be named
       //
       'unused-imports/no-unused-imports': 'error',
 
@@ -172,18 +183,22 @@ const configs = tseslint.config(
       'unicorn/prefer-node-protocol': 'error', // Prefer using the node: protocol when importing Node.js builtin modules.
       'unicorn/prefer-top-level-await': 'error', // Prefer top-level await over top-level promises and async function calls.
 
+      //---------------------------------------------
       //
+      //
+      // require a eslint-enable comment for every eslint-disable comment
       '@eslint-community/eslint-comments/disable-enable-pair': [
         'error',
         {
           allowWholeFile: true,
         },
       ],
-      '@eslint-community/eslint-comments/no-aggregating-enable': 'error',
-      '@eslint-community/eslint-comments/no-duplicate-disable': 'error',
-      '@eslint-community/eslint-comments/no-unlimited-disable': 'off',
-      '@eslint-community/eslint-comments/no-unused-disable': 'error',
-      '@eslint-community/eslint-comments/no-unused-enable': 'error',
+      '@eslint-community/eslint-comments/no-aggregating-enable': 'error', // disallow a eslint-enable comment for multiple eslint-disable comments
+      '@eslint-community/eslint-comments/no-duplicate-disable': 'error', // disallow duplicate eslint-disable comments
+      '@eslint-community/eslint-comments/no-unlimited-disable': 'off', // disallow eslint-disable comments without rule names - default generated in apollo
+      '@eslint-community/eslint-comments/no-unused-disable': 'error', // disallow unused eslint-disable comments
+      '@eslint-community/eslint-comments/no-unused-enable': 'error', // disallow unused eslint-enable comments
+      // disallow ESLint directive-comments
       '@eslint-community/eslint-comments/no-use': [
         'error',
         {

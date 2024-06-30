@@ -6,6 +6,7 @@ import { FlatCompat } from '@eslint/eslintrc'
 import eslintJs from '@eslint/js'
 // import eslintTs from "typescript-eslint";
 
+export default {}
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
