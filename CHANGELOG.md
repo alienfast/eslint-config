@@ -1,3 +1,15 @@
+# v5.1.4 (Sun Jun 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix bad minimatch top level paths ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.3 (Sun Jun 30 2024)
 
 #### ⚠️ Pushed to `main`
