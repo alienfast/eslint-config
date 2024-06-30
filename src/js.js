@@ -35,8 +35,7 @@ const configs = tseslint.config(
       ...compat.config(importX.configs.react),
       importX.configs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
       ...compat.config(reactHooks.configs.recommended),
-      ...compat.config(storybook.configs.recommended),
-      //   ...fixupConfigRules(compat.extends('plugin:storybook/recommended'))[0],
+      ...storybook.configs['flat/recommended'],
       comments.recommended,
     ],
     languageOptions: {

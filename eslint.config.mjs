@@ -34,8 +34,8 @@ export default tseslint.config(
   {
     name: 'project-json',
     extends: [
-      // ...configs.json,
-      // ...configs.markdown,
+      //   ...configs.json,
+      //   ...configs.markdown,
       ...configs.js,
     ],
     rules: {
