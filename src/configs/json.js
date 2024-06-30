@@ -1,7 +1,7 @@
 import json from 'eslint-plugin-json'
 import tseslint from 'typescript-eslint'
 
-import { BUILD_IGNORES, JSON_FILES } from './constants.js'
+import { BUILD_IGNORES, JSON_FILES } from '../constants.js'
 
 // npx @eslint/config-inspector
 const configs = tseslint.config(

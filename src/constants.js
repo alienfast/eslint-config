@@ -1,4 +1,3 @@
-export default {}
 export const BUILD_IGNORES = [
   'packages/*/lib',
   './lib/',

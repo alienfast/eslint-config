@@ -11,8 +11,8 @@ import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-import { ALL_JS_FILES, BUILD_IGNORES, NOT_JS } from './constants.js'
-import { compat } from './legacy.js'
+import { ALL_JS_FILES, BUILD_IGNORES, NOT_JS } from '../constants.js'
+import { compat } from '../legacy.js'
 
 // npx @eslint/config-inspector
 const configs = tseslint.config(

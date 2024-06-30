@@ -1,4 +1,4 @@
-/* eslint-disable no-console,@typescript-eslint/no-floating-promises */
+/* eslint-disable no-console */
 import { $ } from 'execa'
 import { rimraf as r } from 'rimraf'
 
