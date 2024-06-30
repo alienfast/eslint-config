@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 

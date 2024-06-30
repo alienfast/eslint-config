@@ -1,3 +1,4 @@
+/* eslint-disable no-console,@typescript-eslint/no-floating-promises */
 import { $ } from 'execa'
 import { rimraf as r } from 'rimraf'
 
@@ -14,6 +15,5 @@ await Promise.all([
   r('node_modules'),
   r('.yarn/install-state.gz'),
 ]).then(() => {
-  /* eslint-disable @typescript-eslint/no-floating-promises */
   $`yarn cache clean`
 })

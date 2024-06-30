@@ -5,9 +5,9 @@ import importX from 'eslint-plugin-import-x'
 // import unicorn from 'eslint-plugin-unicorn'
 // import unusedImports from 'eslint-plugin-unused-imports'
 // import tsParser from '@typescript-eslint/parser'
-// import eslintComments from 'eslint-plugin-eslint-comments'
 // import n from 'eslint-plugin-n'
 
+import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import { compat, legacyPlugin } from './legacy.js'
 import eslint from '@eslint/js'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
@@ -46,6 +46,7 @@ const configs = tseslint.config(
       ...compat.config(reactHooks.configs.recommended),
       ...compat.config(storybook.configs.recommended),
       //   ...fixupConfigRules(compat.extends('plugin:storybook/recommended'))[0],
+      comments.recommended,
     ],
     languageOptions: {
       globals: {
@@ -85,77 +86,79 @@ const configs = tseslint.config(
     },
 
     rules: {
-      //   'guard-for-in': 'error',
-      //   'no-bitwise': 'error',
-      //   'no-caller': 'error',
-      //   'no-console': 'error',
-      //   'no-eval': 'error',
-      //   'no-new-wrappers': 'error',
-      //   'no-throw-literal': 'error',
-      //   'object-shorthand': 'error',
-      //   'one-var': ['error', 'never'],
-      //   'require-await': 'off',
-      //   'sort-keys': 'off',
-      //   'sort-imports': 'off',
-      //   '@typescript-eslint/restrict-template-expressions': 'off',
-      //   '@typescript-eslint/array-type': [
-      //     'error',
-      //     {
-      //       default: 'array-simple',
-      //     },
-      //   ],
-      //   '@typescript-eslint/camelcase': 'off',
-      //   '@typescript-eslint/explicit-function-return-type': 'off',
-      //   '@typescript-eslint/explicit-member-accessibility': [
-      //     'error',
-      //     {
-      //       overrides: {
-      //         constructors: 'no-public',
-      //       },
-      //     },
-      //   ],
-      //   '@typescript-eslint/member-ordering': 'error',
-      //   '@typescript-eslint/no-empty-function': 'off',
-      //   '@typescript-eslint/no-empty-interface': 'off',
-      //   '@typescript-eslint/no-explicit-any': 'off',
-      //   '@typescript-eslint/no-misused-promises': 'off',
-      //   '@typescript-eslint/no-non-null-assertion': 'off',
-      //   '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-      //   '@typescript-eslint/no-unused-vars': 'off',
-      //   '@typescript-eslint/no-use-before-define': 'off',
-      //   '@typescript-eslint/no-var-requires': 'off',
-      //   '@typescript-eslint/prefer-for-of': 'error',
-      //   '@typescript-eslint/prefer-function-type': 'off',
-      //   '@typescript-eslint/require-await': 'off',
-      //   '@typescript-eslint/unbound-method': 'off',
-      //   '@typescript-eslint/unified-signatures': 'error',
+      'guard-for-in': 'error',
+      'no-bitwise': 'error',
+      'no-caller': 'error',
+      'no-console': 'error',
+      'no-eval': 'error',
+      'no-new-wrappers': 'error',
+      'no-throw-literal': 'error',
+      'object-shorthand': 'error',
+      'one-var': ['error', 'never'],
+      'require-await': 'off',
+      'sort-keys': 'off',
+      'sort-imports': 'off',
+      '@typescript-eslint/restrict-template-expressions': 'off',
+      '@typescript-eslint/array-type': [
+        'error',
+        {
+          default: 'array-simple',
+        },
+      ],
+      '@typescript-eslint/camelcase': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-member-accessibility': [
+        'error',
+        {
+          overrides: {
+            constructors: 'no-public',
+          },
+        },
+      ],
+      '@typescript-eslint/member-ordering': 'error',
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-empty-interface': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-misused-promises': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-use-before-define': 'off',
+      '@typescript-eslint/no-var-requires': 'off',
+      '@typescript-eslint/prefer-for-of': 'error',
+      '@typescript-eslint/prefer-function-type': 'off',
+      '@typescript-eslint/require-await': 'off',
+      '@typescript-eslint/unbound-method': 'off',
+      '@typescript-eslint/unified-signatures': 'error',
       //   'simple-import-sort/imports': 'error',
       //   'simple-import-sort/exports': 'error',
-      //   'import-x/no-unresolved': 'error',
-      //   'import-x/first': 'error',
-      //   'import-x/no-duplicates': 'error',
-      //   'import-x/extensions': 'error',
-      //   'import-x/no-useless-path-segments': 'error',
-      //   'import-x/no-commonjs': 'error',
-      //   'import-x/newline-after-import': 'error',
-      //   'import-x/no-absolute-path': 'error',
-      //   'import-x/no-amd': 'error',
-      //   'import-x/no-default-export': 'off',
-      //   'import-x/no-extraneous-dependencies': [
-      //     'error',
-      //     {
-      //       devDependencies: true,
-      //       peerDependencies: true,
-      //       optionalDependencies: false,
-      //     },
-      //   ],
-      //   'import-x/no-mutable-exports': 'error',
-      //   'import-x/named': 'off',
-      //   'import-x/no-named-default': 'off',
-      //   'import-x/no-named-export': 'off',
-      //   'import-x/no-self-import': 'error',
-      //   'import-x/order': 'off',
-      //   'import-x/prefer-default-export': 'off',
+      'import-x/no-unresolved': 'error',
+      'import-x/first': 'error',
+      'import-x/no-duplicates': 'error',
+
+      // off for now, because new stuff wants extensions, old stuff doesn't have it
+      //'import-x/extensions': 'error',
+      'import-x/no-useless-path-segments': 'error',
+      'import-x/no-commonjs': 'error',
+      'import-x/newline-after-import': 'error',
+      'import-x/no-absolute-path': 'error',
+      'import-x/no-amd': 'error',
+      'import-x/no-default-export': 'off',
+      'import-x/no-extraneous-dependencies': [
+        'error',
+        {
+          devDependencies: true,
+          peerDependencies: true,
+          optionalDependencies: false,
+        },
+      ],
+      'import-x/no-mutable-exports': 'error',
+      'import-x/named': 'off',
+      'import-x/no-named-default': 'off',
+      'import-x/no-named-export': 'off',
+      'import-x/no-self-import': 'error',
+      'import-x/order': 'off',
+      'import-x/prefer-default-export': 'off',
       //   'unused-imports/no-unused-imports': 'error',
       //   'n/no-missing-import': 'off',
       //   'n/no-extraneous-import': 'error',
@@ -163,28 +166,28 @@ const configs = tseslint.config(
       //   'unicorn/prefer-module': 'error',
       //   'unicorn/prefer-node-protocol': 'error',
       //   'unicorn/prefer-top-level-await': 'error',
-      //   'eslint-comments/disable-enable-pair': [
-      //     'error',
-      //     {
-      //       allowWholeFile: true,
-      //     },
-      //   ],
-      //   'eslint-comments/no-aggregating-enable': 'error',
-      //   'eslint-comments/no-duplicate-disable': 'error',
-      //   'eslint-comments/no-unlimited-disable': 'off',
-      //   'eslint-comments/no-unused-disable': 'error',
-      //   'eslint-comments/no-unused-enable': 'error',
-      //   'eslint-comments/no-use': [
-      //     'error',
-      //     {
-      //       allow: [
-      //         'eslint-disable',
-      //         'eslint-disable-line',
-      //         'eslint-disable-next-line',
-      //         'eslint-enable',
-      //       ],
-      //     },
-      //   ],
+      '@eslint-community/eslint-comments/disable-enable-pair': [
+        'error',
+        {
+          allowWholeFile: true,
+        },
+      ],
+      '@eslint-community/eslint-comments/no-aggregating-enable': 'error',
+      '@eslint-community/eslint-comments/no-duplicate-disable': 'error',
+      '@eslint-community/eslint-comments/no-unlimited-disable': 'off',
+      '@eslint-community/eslint-comments/no-unused-disable': 'error',
+      '@eslint-community/eslint-comments/no-unused-enable': 'error',
+      '@eslint-community/eslint-comments/no-use': [
+        'error',
+        {
+          allow: [
+            'eslint-disable',
+            'eslint-disable-line',
+            'eslint-disable-next-line',
+            'eslint-enable',
+          ],
+        },
+      ],
     },
   },
   // always last so it disables rules incompatible with prettier during the process execution

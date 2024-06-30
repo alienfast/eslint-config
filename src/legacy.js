@@ -25,6 +25,5 @@ export function legacyPlugin(name, alias = name) {
     throw new Error(`Unable to resolve plugin ${name} and/or alias ${alias}`)
   }
 
-  /* eslint-disable @typescript-eslint/no-unsafe-return */
   return fixupPluginRules(plugin)
 }
