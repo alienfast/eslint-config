@@ -1,8 +1,8 @@
 import eslint from '@eslint/js'
-// import tsParser from '@typescript-eslint/parser'
-// import n from 'eslint-plugin-n'
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import importX from 'eslint-plugin-import-x'
+// import tsParser from '@typescript-eslint/parser'
+import n from 'eslint-plugin-n'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
@@ -78,7 +78,7 @@ const configs = tseslint.config(
     plugins: {
       'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
-      //   n,
+      n,
       //   unicorn,
     },
 
@@ -166,15 +166,19 @@ const configs = tseslint.config(
       //
       'unused-imports/no-unused-imports': 'error',
 
+      //---------------------------------------------
+      // eslint-plugin-node (use this to setup for esm transition)
       //
-      //   'n/no-missing-import': 'off',
-      //   'n/no-extraneous-import': 'error',
-      //   'n/file-extension-in-import': 'off',
+      'n/no-missing-import': 'off',
+      'n/no-extraneous-import': 'error',
+      'n/file-extension-in-import': 'off',
 
+      //---------------------------------------------
+      // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
       //
-      //   'unicorn/prefer-module': 'error',
-      //   'unicorn/prefer-node-protocol': 'error',
-      //   'unicorn/prefer-top-level-await': 'error',
+      // 'unicorn/prefer-module': 'error', // Prefer JavaScript modules (ESM) over CommonJS. (autofix)
+      // 'unicorn/prefer-node-protocol': 'error', // Prefer using the node: protocol when importing Node.js builtin modules.
+      // 'unicorn/prefer-top-level-await': 'error', // Prefer top-level await over top-level promises and async function calls.
 
       //
       '@eslint-community/eslint-comments/disable-enable-pair': [
