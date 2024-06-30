@@ -117,7 +117,7 @@
 #### ⚠️ Pushed to `main`
 
 - Merge branch 'release/4.0.3' ([@alienfast-build](https://github.com/alienfast-build))
-- allow tsconfig* at the root ([@rosskevin](https://github.com/rosskevin))
+- allow tsconfig\* at the root ([@rosskevin](https://github.com/rosskevin))
 - Merge branch 'release/4.0.2' ([@alienfast-build](https://github.com/alienfast-build))
 - oops, forgot to reset the parserOptions.project to tsconfig.json for config file linting ([@rosskevin](https://github.com/rosskevin))
 - Merge branch 'release/4.0.1' ([@alienfast-build](https://github.com/alienfast-build))
