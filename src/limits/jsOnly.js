@@ -1,5 +1,7 @@
 import tseslint from 'typescript-eslint'
 
+import { JS_FILES } from '../constants.js'
+
 /**
  * Turn off rules not necessary for js only files.
  *
@@ -9,6 +11,7 @@ import tseslint from 'typescript-eslint'
  */
 const configs = tseslint.config({
   name: 'alienfast-js-only',
+  files: JS_FILES,
   rules: {
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
