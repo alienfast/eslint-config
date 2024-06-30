@@ -1,7 +1,4 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat'
 import eslint from '@eslint/js'
-// import unicorn from 'eslint-plugin-unicorn'
-// import unusedImports from 'eslint-plugin-unused-imports'
 // import tsParser from '@typescript-eslint/parser'
 // import n from 'eslint-plugin-n'
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
@@ -10,11 +7,13 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import storybook from 'eslint-plugin-storybook'
+// import unicorn from 'eslint-plugin-unicorn'
+import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 import { ALL_JS_FILES, BUILD_IGNORES, JS_FILES, TS_FILES } from './constants.js'
-import { compat, legacyPlugin } from './legacy.js'
+import { compat } from './legacy.js'
 
 // console.log('fixup')
 // console.log(fixupConfigRules(compat.extends('plugin:import/typescript')))
@@ -78,7 +77,7 @@ const configs = tseslint.config(
     },
     plugins: {
       'simple-import-sort': simpleImportSort,
-      //   'unused-imports': unusedImports,
+      'unused-imports': unusedImports,
       //   n,
       //   unicorn,
     },
@@ -163,13 +162,21 @@ const configs = tseslint.config(
       'import-x/no-self-import': 'error',
       'import-x/order': 'off',
       'import-x/prefer-default-export': 'off',
-      //   'unused-imports/no-unused-imports': 'error',
+
+      //
+      'unused-imports/no-unused-imports': 'error',
+
+      //
       //   'n/no-missing-import': 'off',
       //   'n/no-extraneous-import': 'error',
       //   'n/file-extension-in-import': 'off',
+
+      //
       //   'unicorn/prefer-module': 'error',
       //   'unicorn/prefer-node-protocol': 'error',
       //   'unicorn/prefer-top-level-await': 'error',
+
+      //
       '@eslint-community/eslint-comments/disable-enable-pair': [
         'error',
         {
