@@ -1,3 +1,15 @@
+# v5.1.5 (Sun Jun 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- handle js/ts embedded in md ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.4 (Sun Jun 30 2024)
 
 #### ⚠️ Pushed to `main`
