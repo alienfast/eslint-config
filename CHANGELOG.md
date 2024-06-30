@@ -1,3 +1,15 @@
+# v5.1.1 (Sun Jun 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Ensure that js only rules are only applied to js files, not ts files ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.0 (Sun Jun 30 2024)
 
 #### 🚀 Enhancement
