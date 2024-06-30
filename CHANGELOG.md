@@ -1,3 +1,15 @@
+# v5.1.2 (Sun Jun 30 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix prettier errors in vscode ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.1 (Sun Jun 30 2024)
 
 #### ⚠️ Pushed to `main`
