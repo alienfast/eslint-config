@@ -1,25 +1,18 @@
 import eslint from '@eslint/js'
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import importX from 'eslint-plugin-import-x'
-// import tsParser from '@typescript-eslint/parser'
 import n from 'eslint-plugin-n'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import storybook from 'eslint-plugin-storybook'
-// import unicorn from 'eslint-plugin-unicorn'
+import unicorn from 'eslint-plugin-unicorn'
 import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 import { ALL_JS_FILES, BUILD_IGNORES, JS_FILES, TS_FILES } from './constants.js'
 import { compat } from './legacy.js'
-
-// console.log('fixup')
-// console.log(fixupConfigRules(compat.extends('plugin:import/typescript')))
-// console.log('straight compat')
-// console.log(compat.extends('plugin:import/typescript'))
-// process.exit(0)
 
 // npx @eslint/config-inspector
 const configs = tseslint.config(
@@ -79,7 +72,7 @@ const configs = tseslint.config(
       'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
       n,
-      //   unicorn,
+      unicorn,
     },
 
     rules: {
@@ -174,11 +167,11 @@ const configs = tseslint.config(
       'n/file-extension-in-import': 'off',
 
       //---------------------------------------------
-      // eslint-plugin-unicornd (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
+      // eslint-plugin-unicorn (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
       //
-      // 'unicorn/prefer-module': 'error', // Prefer JavaScript modules (ESM) over CommonJS. (autofix)
-      // 'unicorn/prefer-node-protocol': 'error', // Prefer using the node: protocol when importing Node.js builtin modules.
-      // 'unicorn/prefer-top-level-await': 'error', // Prefer top-level await over top-level promises and async function calls.
+      'unicorn/prefer-module': 'error', // Prefer JavaScript modules (ESM) over CommonJS. (autofix)
+      'unicorn/prefer-node-protocol': 'error', // Prefer using the node: protocol when importing Node.js builtin modules.
+      'unicorn/prefer-top-level-await': 'error', // Prefer top-level await over top-level promises and async function calls.
 
       //
       '@eslint-community/eslint-comments/disable-enable-pair': [
