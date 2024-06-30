@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { rimraf as r } from 'rimraf'
 
 // TODO: promote this as a script to @alienfast/ci once it is stable

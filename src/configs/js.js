@@ -14,19 +14,24 @@ import tseslint from 'typescript-eslint'
 import { ALL_JS_FILES, BUILD_IGNORES, NOT_JS } from '../constants.js'
 import { compat } from '../legacy.js'
 
-// npx @eslint/config-inspector
+/**
+ * Configuration preset for typescript files with any js/ts extension
+ *
+ * View configuration with `npx @eslint/config-inspector`
+ */
 const configs = tseslint.config(
-  {
-    name: 'alienfast-js-files',
-    files: [...ALL_JS_FILES],
-  },
   {
     name: 'alienfast-js-ignores',
     ignores: [...BUILD_IGNORES],
   },
   {
+    name: 'alienfast-js-files',
+    files: [...ALL_JS_FILES],
+  },
+  {
     name: 'alienfast-js',
     ignores: NOT_JS,
+
     extends: [
       // Recommended config applied to all files
       eslint.configs.recommended,

@@ -1,3 +1,4 @@
+export default {}
 export const BUILD_IGNORES = [
   'packages/*/lib',
   './lib/',
@@ -8,6 +9,8 @@ export const BUILD_IGNORES = [
   '**/.pnp*',
   '**/.yarn',
 ]
+
+export const SCRIPTS = ['scripts/**/*.js']
 
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
 export const JS_FILES = ['**/*.{js,mjs,cjs}']

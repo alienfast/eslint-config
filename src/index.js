@@ -1,9 +1,9 @@
 import configs from './configs/index.js'
 import * as constants from './constants.js'
-import rulesets from './rulesets/index.js'
+import limits from './limits/index.js'
 
 export default {
   constants,
   configs,
-  rulesets,
+  limits,
 }

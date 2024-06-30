@@ -3,7 +3,11 @@ import tseslint from 'typescript-eslint'
 
 import { BUILD_IGNORES, MD_FILES } from '../constants.js'
 
-// npx @eslint/config-inspector
+/**
+ * Configuration preset for markdown files
+ *
+ * View configuration with `npx @eslint/config-inspector`
+ */
 const configs = tseslint.config(
   ...markdown.configs.recommended,
   {
