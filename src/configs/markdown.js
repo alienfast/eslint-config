@@ -18,6 +18,9 @@ const configs = tseslint.config(
     name: 'alienfast-markdown',
     extends: [...markdown.configs.recommended],
     files: MD_FILES,
+    rules: {
+      'import-x/no-unresolved': 'off',
+    },
   },
   {
     name: 'alienfast-markdown-embedded-js',
