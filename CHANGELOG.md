@@ -1,3 +1,15 @@
+# v5.1.10 (Thu Jul 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- turn of import resolution enforment for md files ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.9 (Thu Jul 04 2024)
 
 #### 🐛 Bug Fix
