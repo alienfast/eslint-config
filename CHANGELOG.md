@@ -1,3 +1,15 @@
+# v5.1.13 (Thu Jul 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- force eslint-plugin-react-hooks up to 5@rc ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.12 (Thu Jul 04 2024)
 
 #### ⚠️ Pushed to `main`
