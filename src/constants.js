@@ -8,6 +8,7 @@ export const BUILD_IGNORES = [
   '**/typings',
   '**/.pnp*',
   '**/.yarn',
+  'storybook-static',
 ]
 
 export const SCRIPTS = ['scripts/**/*.js']
