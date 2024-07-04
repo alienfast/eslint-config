@@ -54,7 +54,10 @@ const configs = tseslint.config(
       parserOptions: {
         // project: true, // find the closest tsconfig file. ['./tsconfig*.json', './packages/*/tsconfig.json'],
         // project: ['./tsconfig*.json', './packages/*/tsconfig.json'],
-        project: ['./tsconfig*.json'],
+        // project: ['./tsconfig*.json'],
+        project: true,
+        warnOnUnsupportedTypeScriptVersion: true,
+        EXPERIMENTAL_useProjectService: true,
       },
     },
 
@@ -66,7 +69,7 @@ const configs = tseslint.config(
       },
       'import-x/resolver': {
         typescript: {
-          // alwaysTryTypes: true,
+          alwaysTryTypes: true,
           project: ['packages/*/tsconfig.json'],
         },
         node: {

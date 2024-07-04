@@ -12,15 +12,16 @@ import { JS_FILES } from '../constants.js'
 const configs = tseslint.config({
   name: 'alienfast-js-only',
   files: JS_FILES,
-  rules: {
-    '@typescript-eslint/no-unsafe-argument': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-return': 'off',
-    '@typescript-eslint/no-floating-promises': 'off',
-  },
+  ...tseslint.configs.disableTypeChecked,
+  // rules: {
+  //   '@typescript-eslint/no-unsafe-argument': 'off',
+  //   '@typescript-eslint/no-unsafe-member-access': 'off',
+  //   '@typescript-eslint/no-unused-vars': 'off',
+  //   '@typescript-eslint/no-unsafe-assignment': 'off',
+  //   '@typescript-eslint/no-unsafe-call': 'off',
+  //   '@typescript-eslint/no-unsafe-return': 'off',
+  //   '@typescript-eslint/no-floating-promises': 'off',
+  // },
 })
 
 export default configs
