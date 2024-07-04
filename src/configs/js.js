@@ -53,7 +53,8 @@ const configs = tseslint.config(
       // parser: tsParser,
       parserOptions: {
         // project: true, // find the closest tsconfig file. ['./tsconfig*.json', './packages/*/tsconfig.json'],
-        project: ['./tsconfig*.json', './packages/*/tsconfig.json'],
+        // project: ['./tsconfig*.json', './packages/*/tsconfig.json'],
+        project: ['./tsconfig*.json'],
       },
     },
 
@@ -215,6 +216,23 @@ const configs = tseslint.config(
           ],
         },
       ],
+    },
+  },
+  // allow commonjs for cjs files
+  {
+    name: 'alienfast-limits-cjs',
+    files: ['**/*.cjs'],
+    rules: {
+      'import-x/no-commonjs': 'off',
+    },
+  },
+  // don't worry much about the eslint config file
+  {
+    name: 'alienfast-limits-eslint.config.mjs',
+    files: ['**/eslint.config.mjs'],
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
     },
   },
   // always last so it disables rules incompatible with prettier during the process execution

@@ -10,7 +10,8 @@ import af from './src/index.js'
 export default tseslint.config({
   name: 'project',
   extends: [
-    // ...af.configs.markdown,
+    //
+    ...af.configs.markdown,
     ...af.configs.recommended,
     ...af.limits.jsOnly,
   ],

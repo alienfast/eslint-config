@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 .*
+tsconfig*.json
+scripts
+eslint*
 yarn*
-.circleci
-tsconfig.lint.json
+foo*.json
