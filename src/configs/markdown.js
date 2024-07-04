@@ -18,15 +18,15 @@ const configs = tseslint.config(
     name: 'alienfast-markdown',
     extends: [...markdown.configs.recommended],
     files: MD_FILES,
-    rules: {
-      'import-x/no-unresolved': 'off',
-    },
   },
   {
     name: 'alienfast-markdown-embedded-js',
     // don't typecheck js/ts in md files
     extends: [tseslint.configs.disableTypeChecked],
     files: ['**/*.md/**'],
+    rules: {
+      'import-x/no-unresolved': 'off',
+    },
   },
 )
 
