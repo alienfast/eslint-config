@@ -1,3 +1,15 @@
+# v5.1.11 (Thu Jul 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- do not check imports on md embedded ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.10 (Thu Jul 04 2024)
 
 #### ⚠️ Pushed to `main`
