@@ -1,3 +1,15 @@
+# v5.1.9 (Thu Jul 04 2024)
+
+#### 🐛 Bug Fix
+
+- Enable project references [#9](https://github.com/alienfast/eslint-config/pull/9) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.8 (Thu Jul 04 2024)
 
 #### 🐛 Bug Fix
