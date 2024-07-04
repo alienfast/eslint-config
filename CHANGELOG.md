@@ -1,3 +1,15 @@
+# v5.1.12 (Thu Jul 04 2024)
+
+#### ⚠️ Pushed to `main`
+
+- ignore storybook-static ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.11 (Thu Jul 04 2024)
 
 #### ⚠️ Pushed to `main`
