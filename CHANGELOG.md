@@ -1,3 +1,15 @@
+# v5.1.8 (Thu Jul 04 2024)
+
+#### 🐛 Bug Fix
+
+- Adjustments for full repo and ease of use [#8](https://github.com/alienfast/eslint-config/pull/8) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.7 (Sun Jun 30 2024)
 
 #### ⚠️ Pushed to `main`
