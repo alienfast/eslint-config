@@ -3,6 +3,5 @@
     "**/.yarn": true,
     "**/.pnp.*": true
   },
-  "eslint.nodePath": ".yarn/sdks",
   "eslint.useFlatConfig": true
 }
