@@ -1,3 +1,15 @@
+# v5.1.14 (Sat Jul 06 2024)
+
+#### 🐛 Bug Fix
+
+- Add ts react tweaks [#10](https://github.com/alienfast/eslint-config/pull/10) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.13 (Thu Jul 04 2024)
 
 #### ⚠️ Pushed to `main`
