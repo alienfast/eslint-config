@@ -11,7 +11,7 @@ import jsOnly from './jsOnly.js'
  * View config with `npx @eslint/config-inspector`
  */
 const configs = tseslint.config({
-  name: 'alienfast-js-only-scripts',
+  name: 'alienfast-limits-js-only-scripts',
   extends: [...jsOnly],
   files: SCRIPTS,
   rules: {
