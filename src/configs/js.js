@@ -68,13 +68,15 @@ const configs = tseslint.config(
         '@typescript-eslint/parser': ALL_JS_FILES,
       },
       'import-x/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-          project: ['packages/*/tsconfig.json'],
-        },
-        node: {
-          extensions: ALL_JS_FILES,
-        },
+        typescript: true,
+        node: true,
+        // typescript: {
+        //   alwaysTryTypes: true,
+        //   project: ['packages/*/tsconfig.json'],
+        // },
+        // node: {
+        //   extensions: ALL_JS_FILES,
+        // },
       },
     },
     plugins: {
@@ -123,6 +125,7 @@ const configs = tseslint.config(
         },
       ],
       '@typescript-eslint/member-ordering': 'error',
+      '@typescript-eslint/no-base-to-string': 'off', // annoying about stringifying objects
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-empty-interface': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
