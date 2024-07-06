@@ -10,7 +10,7 @@ import { JS_FILES } from '../constants.js'
  * View config with `npx @eslint/config-inspector`
  */
 const configs = tseslint.config({
-  name: 'alienfast-js-only',
+  name: 'alienfast-limits-js-only',
   files: JS_FILES,
   ...tseslint.configs.disableTypeChecked,
   // rules: {
