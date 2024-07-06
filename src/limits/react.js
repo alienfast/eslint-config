@@ -1,6 +1,6 @@
 import tseslint from 'typescript-eslint'
 
-import { JS_FILES } from '../constants.js'
+import { ALL_JS_FILES } from '../constants.js'
 
 /**
  * Turn off rules not necessary for js only files.
@@ -11,7 +11,7 @@ import { JS_FILES } from '../constants.js'
  */
 const configs = tseslint.config({
   name: 'alienfast-limits-react',
-  files: JS_FILES,
+  files: ALL_JS_FILES,
   rules: {
     // this gets really messy in tsx and graphql when types are forced to any e.g. policies
     '@typescript-eslint/no-unsafe-assignment': 'off', // 57% of the time
