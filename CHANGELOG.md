@@ -1,3 +1,15 @@
+# v5.1.15 (Sat Jul 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix files on react limits ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.14 (Sat Jul 06 2024)
 
 #### 🐛 Bug Fix
