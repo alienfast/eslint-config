@@ -1,3 +1,18 @@
+# v5.1.16 (Wed Jul 17 2024)
+
+#### ⚠️ Pushed to `main`
+
+- explicit node 22 ([@rosskevin](https://github.com/rosskevin))
+- update ci action versions, use lts ([@rosskevin](https://github.com/rosskevin))
+- update and reset yarn ([@rosskevin](https://github.com/rosskevin))
+- ncu ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.15 (Sat Jul 06 2024)
 
 #### ⚠️ Pushed to `main`
