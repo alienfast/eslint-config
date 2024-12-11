@@ -1,3 +1,16 @@
+# v5.1.18 (Wed Dec 11 2024)
+
+#### ⚠️ Pushed to `main`
+
+- bad limit reference ([@rosskevin](https://github.com/rosskevin))
+- make sure that it is easy for root mjs files etc to be linted in a ts project ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.17 (Wed Dec 11 2024)
 
 #### 🐛 Bug Fix
