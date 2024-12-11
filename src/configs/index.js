@@ -7,7 +7,7 @@ const configs = {
   js,
   json,
   markdown,
-  recommended: [...js, ...limits.js, ...limits.jsOnlyScripts, ...json, ...markdown],
+  recommended: [...js, ...limits.jsOnly, ...limits.jsOnlyScripts, ...json, ...markdown],
   other: [...markdown, ...json],
 }
 export default configs
