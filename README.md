@@ -8,11 +8,5 @@ Eslint configuration for @alienfast projects.
 import { $ } from 'execa'
 
 $`yarn clean`
-```
-
-```ts
-import { $ } from 'execa'
-
-$`yarn clean`
-blah
+// blah
 ```
