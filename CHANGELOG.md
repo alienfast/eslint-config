@@ -1,3 +1,15 @@
+# v5.1.17 (Wed Dec 11 2024)
+
+#### 🐛 Bug Fix
+
+- updates, some removal of compat now that migrations were done for imp… [#11](https://github.com/alienfast/eslint-config/pull/11) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.16 (Wed Jul 17 2024)
 
 #### ⚠️ Pushed to `main`
