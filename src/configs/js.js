@@ -36,10 +36,10 @@ const configs = tseslint.config(
       // Recommended config applied to all files
       eslint.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
-      ...compat.config(importX.configs.errors), // still has plugins: []
-      ...compat.config(importX.configs.warnings), // https://github.com/un-ts/eslint-plugin-import-x/issues/29#issuecomment-2148843214
-      ...compat.config(importX.configs.react),
-      importX.configs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
+      importX.flatConfigs.errors,
+      importX.flatConfigs.warnings,
+      importX.flatConfigs.react,
+      importX.flatConfigs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
       ...compat.config(reactHooks.configs.recommended),
       ...storybook.configs['flat/recommended'],
       comments.recommended,
@@ -140,6 +140,9 @@ const configs = tseslint.config(
       '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/unbound-method': 'off', // takes 73s on js!  63% of the timing!
       '@typescript-eslint/unified-signatures': 'error',
+      // https://typescript-eslint.io/rules/no-unused-expressions/
+      'no-unused-expressions': 'off', // Note: you must disable the base rule as it can report incorrect errors
+      '@typescript-eslint/no-unused-expressions': ['error', { allowTaggedTemplates: true }],
 
       //---------------------------------------------
       // simple-import-sort

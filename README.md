@@ -5,14 +5,14 @@ Eslint configuration for @alienfast projects.
 ## Markdown linting test
 
 ```js
-import markdown from 'eslint-plugin-markdown'
+import { $ } from 'execa'
 
-markdown.bar
+$`yarn clean`
 ```
 
 ```ts
-import markdown from 'eslint-plugin-markdown'
+import { $ } from 'execa'
 
-markdown.bar
+$`yarn clean`
 blah
 ```
