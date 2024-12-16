@@ -1,3 +1,15 @@
+# v5.1.19 (Mon Dec 16 2024)
+
+#### ⚠️ Pushed to `main`
+
+- add allowances to stop triggering unused-expressions false positive, enable projectService instead of EXPERIMENTAL_useProjectService ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.18 (Wed Dec 11 2024)
 
 #### ⚠️ Pushed to `main`
