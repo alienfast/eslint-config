@@ -1,3 +1,15 @@
+# v5.1.20 (Mon Dec 16 2024)
+
+#### ⚠️ Pushed to `main`
+
+- allow one-off root project files to be linted ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.19 (Mon Dec 16 2024)
 
 #### ⚠️ Pushed to `main`
