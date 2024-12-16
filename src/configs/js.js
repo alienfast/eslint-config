@@ -59,8 +59,8 @@ const configs = tseslint.config(
         warnOnUnsupportedTypeScriptVersion: true,
         projectService: {
           // @see https://typescript-eslint.io/packages/parser#projectservice
-          // allow one-off root project ts files to be linted
-          allowDefaultProject: ['*.ts'],
+          // allow one-off root project/package ts files to be linted without further config
+          allowDefaultProject: ['*.ts', 'packages/*/*.ts'],
         },
       },
     },
@@ -150,6 +150,8 @@ const configs = tseslint.config(
         'error',
         { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
       ],
+      // https://typescript-eslint.io/rules/no-empty-object-type/
+      '@typescript-eslint/no-empty-object-type': ['error', { allowInterfaces: 'always' }],
 
       //---------------------------------------------
       // simple-import-sort
