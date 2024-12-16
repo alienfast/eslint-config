@@ -1,3 +1,15 @@
+# v5.1.21 (Mon Dec 16 2024)
+
+#### ⚠️ Pushed to `main`
+
+- allow one-off root files in each package to be auto included/linted without further config ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.20 (Mon Dec 16 2024)
 
 #### ⚠️ Pushed to `main`
