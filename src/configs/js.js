@@ -57,7 +57,7 @@ const configs = tseslint.config(
         // project: ['./tsconfig*.json'],
         project: true,
         warnOnUnsupportedTypeScriptVersion: true,
-        EXPERIMENTAL_useProjectService: true,
+        projectService: true,
       },
     },
 
@@ -142,7 +142,10 @@ const configs = tseslint.config(
       '@typescript-eslint/unified-signatures': 'error',
       // https://typescript-eslint.io/rules/no-unused-expressions/
       'no-unused-expressions': 'off', // Note: you must disable the base rule as it can report incorrect errors
-      '@typescript-eslint/no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
+      ],
 
       //---------------------------------------------
       // simple-import-sort
