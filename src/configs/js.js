@@ -57,7 +57,11 @@ const configs = tseslint.config(
         // project: ['./tsconfig*.json'],
         project: true,
         warnOnUnsupportedTypeScriptVersion: true,
-        projectService: true,
+        projectService: {
+          // @see https://typescript-eslint.io/packages/parser#projectservice
+          // allow one-off root project ts files to be linted
+          allowDefaultProject: ['*.ts'],
+        },
       },
     },
 
