@@ -26,7 +26,12 @@ const configs = tseslint.config(
         projectService: {
           // @see https://typescript-eslint.io/packages/parser#projectservice
           // allow files to be linted without further config
-          allowDefaultProject: ['*.json', 'packgages/*.json', 'packages/*/*.json'],
+          allowDefaultProject: [
+            '*.json',
+            'packgages/*.json',
+            'packages/*/*.json',
+            '.vscode/*.json',
+          ],
         },
       },
     },
