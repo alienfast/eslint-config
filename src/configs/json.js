@@ -20,6 +20,16 @@ const configs = tseslint.config(
     rules: {
       'json/*': ['error', 'allowComments'],
     },
+    languageOptions: {
+      parserOptions: {
+        extraFileExtensions: ['.json'],
+        projectService: {
+          // @see https://typescript-eslint.io/packages/parser#projectservice
+          // allow files to be linted without further config
+          allowDefaultProject: ['*.json', 'packgages/*.json', 'packages/*/*.json'],
+        },
+      },
+    },
   },
 )
 
