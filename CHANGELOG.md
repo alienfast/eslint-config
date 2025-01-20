@@ -1,3 +1,15 @@
+# v5.1.23 (Mon Jan 20 2025)
+
+#### ⚠️ Pushed to `main`
+
+- default allow lint on .vscode json ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.22 (Mon Jan 20 2025)
 
 #### ⚠️ Pushed to `main`
