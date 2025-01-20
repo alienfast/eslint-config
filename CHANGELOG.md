@@ -1,3 +1,16 @@
+# v5.1.22 (Mon Jan 20 2025)
+
+#### ⚠️ Pushed to `main`
+
+- setup expected json files for linting without further configuration ([@rosskevin](https://github.com/rosskevin))
+- ncu ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.21 (Mon Dec 16 2024)
 
 #### ⚠️ Pushed to `main`
