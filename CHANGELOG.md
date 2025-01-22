@@ -1,3 +1,15 @@
+# v5.1.24 (Wed Jan 22 2025)
+
+#### 🐛 Bug Fix
+
+- ncu && yarn update, make available on npm repo [#12](https://github.com/alienfast/eslint-config/pull/12) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.23 (Mon Jan 20 2025)
 
 #### ⚠️ Pushed to `main`
