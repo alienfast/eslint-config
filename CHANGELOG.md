@@ -1,3 +1,15 @@
+# v5.1.25 (Wed Jan 22 2025)
+
+#### ⚠️ Pushed to `main`
+
+- enforce/fix file extensions in imports to be nodenext compliant ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.24 (Wed Jan 22 2025)
 
 #### 🐛 Bug Fix
