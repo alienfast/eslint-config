@@ -10,7 +10,7 @@ __metadata:
   resolution: "@alienfast/eslint-config@workspace:."
   dependencies:
     "@alienfast/prettier-config": "npm:^1.0.0"
-    "@alienfast/tsconfig": "npm:^1.0.1"
+    "@alienfast/tsconfig": "npm:^1.0.3"
     "@auto-it/all-contributors": "npm:^11.3.0"
     "@auto-it/first-time-contributor": "npm:^11.3.0"
     "@auto-it/released": "npm:^11.3.0"
@@ -57,12 +57,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alienfast/tsconfig@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@alienfast/tsconfig@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40alienfast%2Ftsconfig%2F1.0.1%2F3faf5a7e1dda9d3bb9ae27ba730ed161e1f97065"
+"@alienfast/tsconfig@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@alienfast/tsconfig@npm:1.0.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40alienfast%2Ftsconfig%2F1.0.3%2F95d3b411756330cf6268e70ab823f52bf02c13f3"
   dependencies:
-    "@tsconfig/create-react-app": "npm:^1.0.3"
-  checksum: 10/061b8652c1dfb7a79169cdf8dafc2a2560d5cc15a44cdbcf0ffe54f907c53d656629101c71599eb1111d1d7d00ce3bafe98793551010a3f6111dff4f3d3c27c0
+    "@tsconfig/create-react-app": "npm:^2.0.5"
+  checksum: 10/851813ed3bc25506a61fc5ca50989f4679ae776d84a137e605593a60fc3f4a64b5f62ab13d23f2d21de170ecaa17a07c6b1d61d1cadade37c6c20d510bc17f17
   languageName: node
   linkType: hard
 
@@ -711,10 +711,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/create-react-app@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@tsconfig/create-react-app@npm:1.0.3"
-  checksum: 10/df945bed7a802f38ca63ae373670f445e8bfec74ccb2cdd4b9eca7b76e1b3dd74994c7b59040fd6374136a9f7353d6eb45e4363e6588015317c4e86779172a5f
+"@tsconfig/create-react-app@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "@tsconfig/create-react-app@npm:2.0.5"
+  checksum: 10/5ea364193e07503992418d0261c9fe9f882940b70d84110b760363e352ce4cae9ccd33b0fd8576f972397b15542719eb69b10cab424af4c70859a3d32fa355f1
   languageName: node
   linkType: hard
 

@@ -1,7 +1,7 @@
 {
   "name": "@alienfast/eslint-config",
   "description": "AlienFast's eslint config.",
-  "packageManager": "yarn@4.5.3",
+  "packageManager": "yarn@4.6.0",
   "prettier": "@alienfast/prettier-config",
   "version": "5.1.23",
   "license": "MIT",
@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@alienfast/prettier-config": "^1.0.0",
-    "@alienfast/tsconfig": "^1.0.1",
+    "@alienfast/tsconfig": "^1.0.3",
     "@auto-it/all-contributors": "^11.3.0",
     "@auto-it/first-time-contributor": "^11.3.0",
     "@auto-it/released": "^11.3.0",
