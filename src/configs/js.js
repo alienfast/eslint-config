@@ -166,7 +166,7 @@ const configs = tseslint.config(
       'import-x/first': 'error', // disallow non-import statements appearing before import statements
       'import-x/no-duplicates': 'error', // auto-fix merge into single line
       // off for now, because new stuff wants extensions, old stuff doesn't have it
-      // 'import-x/extensions': 'error', // Ensure consistent use of file extension within the import path.
+      // 'import-x/extensions': 'error', // Use n/file-extension-in-import instead
       'import-x/no-useless-path-segments': 'error', // Prevent unnecessary path segments in import and require statements. (autofix)
       'import-x/no-commonjs': 'error', // Report CommonJS require calls and module.exports or exports.*.
       'import-x/newline-after-import': 'error', // Require a newline after the last import/require in a group
@@ -198,7 +198,7 @@ const configs = tseslint.config(
       //
       'n/no-missing-import': 'off',
       'n/no-extraneous-import': 'error',
-      'n/file-extension-in-import': 'off',
+      'n/file-extension-in-import': ['error', 'always'], // enforce/fix file extension in import statements
 
       //---------------------------------------------
       // eslint-plugin-unicorn (setup for esm transition) https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5
