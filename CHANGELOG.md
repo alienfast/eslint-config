@@ -1,3 +1,15 @@
+# v5.2.2 (Fri Feb 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- switch to a single allowDefaultProject limit file ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.26 (Fri Feb 07 2025)
 
 #### ⚠️ Pushed to `main`
