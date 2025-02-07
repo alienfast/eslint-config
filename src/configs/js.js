@@ -5,7 +5,6 @@ import n from 'eslint-plugin-n'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import reactHooks from 'eslint-plugin-react-hooks'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import storybook from 'eslint-plugin-storybook'
 import unicorn from 'eslint-plugin-unicorn'
 import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
@@ -41,7 +40,6 @@ const configs = tseslint.config(
       importX.flatConfigs.react,
       importX.flatConfigs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
       ...compat.config(reactHooks.configs.recommended),
-      ...storybook.configs['flat/recommended'],
       comments.recommended,
     ],
     languageOptions: {

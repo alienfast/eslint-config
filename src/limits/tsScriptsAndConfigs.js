@@ -18,8 +18,6 @@ const configs = tseslint.config({
   files: ALLOW_DEFAULT_PROJECT_TS,
   rules: {
     'no-console': 'off',
-    'storybook/story-exports': 'off',
-    'storybook/default-exports': 'off',
   },
   languageOptions: {
     parserOptions: {

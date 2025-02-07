@@ -18,6 +18,7 @@ export const ALLOW_DEFAULT_PROJECT_TS = ['*.ts', 'packages/*/*.ts', 'scripts/*.t
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
 export const JS_FILES = ['**/*.{js,jsx,mjs,cjs}']
 export const ALL_JS_FILES = [...JS_FILES, ...TS_FILES]
+export const STORYBOOK_FILES = ['**/*.stories.{ts,tsx,mts,cts}', '**/*.stories.{js,jsx,mjs,cjs}']
 
 export const JSON_FILES = ['**/*.json']
 export const MD_FILES = ['**/*.md']
