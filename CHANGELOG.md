@@ -1,3 +1,15 @@
+# v5.2.3 (Fri Feb 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- parserOptions need to be set in the js main config, whereas we just add allowDefaultProject in the limit file ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.2.2 (Fri Feb 07 2025)
 
 #### ⚠️ Pushed to `main`
