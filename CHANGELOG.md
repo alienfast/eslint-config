@@ -1,3 +1,15 @@
+# v5.2.4 (Fri Feb 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- test/fix script execution ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.2.3 (Fri Feb 07 2025)
 
 #### ⚠️ Pushed to `main`
