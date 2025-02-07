@@ -49,20 +49,6 @@ const configs = tseslint.config(
         ...globals.browser,
         ...globals.node,
       },
-
-      // parser: tsParser,
-      parserOptions: {
-        // project: true, // find the closest tsconfig file. ['./tsconfig*.json', './packages/*/tsconfig.json'],
-        // project: ['./tsconfig*.json', './packages/*/tsconfig.json'],
-        // project: ['./tsconfig*.json'],
-        project: true,
-        warnOnUnsupportedTypeScriptVersion: true,
-        projectService: {
-          // @see https://typescript-eslint.io/packages/parser#projectservice
-          // allow one-off root project/package ts files to be linted without further config
-          allowDefaultProject: ['*.ts', 'packages/*/*.ts'],
-        },
-      },
     },
 
     settings: {

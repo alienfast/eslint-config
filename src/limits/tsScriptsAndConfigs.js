@@ -1,10 +1,12 @@
 import tseslint from 'typescript-eslint'
 
 import js from '../configs/js.js'
-import { SCRIPTS_TS } from '../constants.js'
+import { ALLOW_DEFAULT_PROJECT_TS } from '../constants.js'
 
 /**
- * Turn off rules not necessary for scripts
+ * Turn off rules not necessary for scripts and configs.
+ *
+ * NOTE: this needs to be the single entry that specifies allowDefaultProject.
  *
  * Do not extend configs, it will alter files/ignores behavior.
  *
@@ -13,10 +15,11 @@ import { SCRIPTS_TS } from '../constants.js'
 const configs = tseslint.config({
   name: 'af-limits-ts-scripts',
   extends: [...js],
-  files: SCRIPTS_TS,
+  files: ALLOW_DEFAULT_PROJECT_TS,
   rules: {
     'no-console': 'off',
     'storybook/story-exports': 'off',
+    'storybook/default-exports': 'off',
   },
   languageOptions: {
     parserOptions: {
@@ -25,7 +28,7 @@ const configs = tseslint.config({
       projectService: {
         // @see https://typescript-eslint.io/packages/parser#projectservice
         // allow one-off scripts project/package ts files to be linted without further config
-        allowDefaultProject: SCRIPTS_TS,
+        allowDefaultProject: ALLOW_DEFAULT_PROJECT_TS,
       },
     },
   },

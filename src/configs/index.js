@@ -9,7 +9,7 @@ const configs = {
   markdown,
   recommended: [
     ...js,
-    ...limits.tsScripts,
+    ...limits.tsScriptsAndConfigs,
     ...limits.jsOnly,
     ...limits.jsOnlyScripts,
     ...json,

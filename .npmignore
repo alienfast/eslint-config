@@ -5,4 +5,4 @@ tsconfig*.json
 scripts
 eslint*
 yarn*
-foo*.json
+foo*

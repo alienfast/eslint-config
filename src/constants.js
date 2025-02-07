@@ -12,10 +12,11 @@ export const BUILD_IGNORES = [
 ]
 
 export const SCRIPTS_JS = ['scripts/*.js']
-export const SCRIPTS_TS = ['scripts/*.ts']
+// used in allowProjectDefault, must be complete and once, as this appears to overwrite/last one wins
+export const ALLOW_DEFAULT_PROJECT_TS = ['*.ts', 'packages/*/*.ts', 'scripts/*.ts']
 
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
-export const JS_FILES = ['**/*.{js,mjs,cjs}']
+export const JS_FILES = ['**/*.{js,jsx,mjs,cjs}']
 export const ALL_JS_FILES = [...JS_FILES, ...TS_FILES]
 
 export const JSON_FILES = ['**/*.json']

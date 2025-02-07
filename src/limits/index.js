@@ -1,12 +1,12 @@
 import jsOnly from './jsOnly.js'
 import jsOnlyScripts from './jsOnlyScripts.js'
 import react from './react.js'
-import tsScripts from './tsScripts.js'
+import tsScriptsAndConfigs from './tsScriptsAndConfigs.js'
 
 const ruleset = {
   jsOnly,
   jsOnlyScripts,
   react,
-  tsScripts,
+  tsScriptsAndConfigs,
 }
 export default ruleset
