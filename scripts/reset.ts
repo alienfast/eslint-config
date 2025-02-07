@@ -11,7 +11,7 @@ console.log('Resetting...')
 
 const dir = path.dirname(fileURLToPath(import.meta.url))
 
-await Promise.all([$$`node ${dir}/clean.js`, $$`node ${dir}/clean-yarn.js`])
+await Promise.all([$$`tsx ${dir}/clean.ts`, $$`tsx ${dir}/clean-yarn.ts`])
 
 console.log('Installing...')
 await $$`yarn install`
