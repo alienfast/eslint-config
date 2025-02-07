@@ -49,6 +49,18 @@ const configs = tseslint.config(
         ...globals.browser,
         ...globals.node,
       },
+
+      parserOptions: {
+        // project: true, // find the closest tsconfig file. ['./tsconfig*.json', './packages/*/tsconfig.json'],
+        // project: ['./tsconfig*.json', './packages/*/tsconfig.json'],
+        // project: ['./tsconfig*.json'],
+        project: true,
+        warnOnUnsupportedTypeScriptVersion: true,
+        // see limits/tsScriptsAndConfigs.js instead of using allowDefaultProject here
+        // projectService: {
+        //    allowDefaultProject: CONFIG_TS,
+        // },
+      },
     },
 
     settings: {

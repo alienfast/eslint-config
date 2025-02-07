@@ -23,8 +23,7 @@ const configs = tseslint.config({
   },
   languageOptions: {
     parserOptions: {
-      project: true,
-      warnOnUnsupportedTypeScriptVersion: true,
+      // only
       projectService: {
         // @see https://typescript-eslint.io/packages/parser#projectservice
         // allow one-off scripts project/package ts files to be linted without further config
