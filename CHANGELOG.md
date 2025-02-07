@@ -1,3 +1,15 @@
+# v5.2.6 (Fri Feb 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- break out storybook rules to be filtered by file extension ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.2.5 (Fri Feb 07 2025)
 
 #### ⚠️ Pushed to `main`
