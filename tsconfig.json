@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-
+  "extends": "@alienfast/tsconfig/nodenext.json",
   "compilerOptions": {
     "noEmit": true,
     "allowJs": true
   },
+  // don't include root, or scripts to test real world usage
   "include": [
     "src/**.js",
     "scripts/**/*.js",
-    "*.mjs",
     "src/configs/js.js",
     "src/configs/json.js",
     "src/configs/markdown.js",

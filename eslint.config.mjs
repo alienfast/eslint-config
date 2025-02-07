@@ -9,9 +9,5 @@ import af from './src/index.js'
  */
 export default tseslint.config({
   name: 'project',
-  extends: [
-    //
-    ...af.configs.recommended,
-    ...af.limits.jsOnly,
-  ],
+  extends: [...af.configs.recommended],
 })

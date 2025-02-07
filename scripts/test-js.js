@@ -6,7 +6,7 @@ import { rimraf as r } from 'rimraf'
 export default {}
 console.log('Cleaning yarn...')
 
-// await $`yarn tsc -b --clean`
+await $`yarn tsc -b --clean`
 
 // packages/*/dist cloud/*/dist .eslintcache ./packages/*/*.log *.log
 await Promise.all([

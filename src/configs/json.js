@@ -10,11 +10,11 @@ import { BUILD_IGNORES, JSON_FILES } from '../constants.js'
  */
 const configs = tseslint.config(
   {
-    name: 'alienfast-json-ignores',
+    name: 'af-json-ignores',
     ignores: [...BUILD_IGNORES],
   },
   {
-    name: 'alienfast-json',
+    name: 'af-json',
     files: JSON_FILES,
     ...json.configs['recommended'],
     rules: {

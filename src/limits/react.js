@@ -10,7 +10,7 @@ import { ALL_JS_FILES } from '../constants.js'
  * View config with `npx @eslint/config-inspector`
  */
 const configs = tseslint.config({
-  name: 'alienfast-limits-react',
+  name: 'af-limits-react',
   files: ALL_JS_FILES,
   rules: {
     // this gets really messy in tsx and graphql when types are forced to any e.g. policies

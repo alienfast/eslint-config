@@ -21,15 +21,15 @@ import { compat } from '../legacy.js'
  */
 const configs = tseslint.config(
   {
-    name: 'alienfast-js-ignores',
+    name: 'af-js-ignores',
     ignores: [...BUILD_IGNORES],
   },
   {
-    name: 'alienfast-js-files',
+    name: 'af-js-files',
     files: [...ALL_JS_FILES],
   },
   {
-    name: 'alienfast-js',
+    name: 'af-js',
     ignores: NOT_JS,
 
     extends: [
@@ -238,7 +238,7 @@ const configs = tseslint.config(
   },
   // allow commonjs for cjs files
   {
-    name: 'alienfast-limits-cjs',
+    name: 'af-limits-cjs',
     files: ['**/*.cjs'],
     rules: {
       'import-x/no-commonjs': 'off',
@@ -246,7 +246,7 @@ const configs = tseslint.config(
   },
   // don't worry much about the eslint config file
   {
-    name: 'alienfast-limits-eslint.config.mjs',
+    name: 'af-limits-eslint.config.mjs',
     files: ['**/eslint.config.mjs'],
     rules: {
       '@typescript-eslint/no-unsafe-assignment': 'off',

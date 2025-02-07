@@ -11,7 +11,8 @@ export const BUILD_IGNORES = [
   'storybook-static',
 ]
 
-export const SCRIPTS = ['scripts/**/*.js']
+export const SCRIPTS_JS = ['scripts/*.js']
+export const SCRIPTS_TS = ['scripts/*.ts']
 
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
 export const JS_FILES = ['**/*.{js,mjs,cjs}']

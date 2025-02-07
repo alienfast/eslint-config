@@ -1,6 +1,6 @@
 import tseslint from 'typescript-eslint'
 
-import { SCRIPTS } from '../constants.js'
+import { SCRIPTS_JS } from '../constants.js'
 import jsOnly from './jsOnly.js'
 
 /**
@@ -11,9 +11,9 @@ import jsOnly from './jsOnly.js'
  * View config with `npx @eslint/config-inspector`
  */
 const configs = tseslint.config({
-  name: 'alienfast-limits-js-only-scripts',
+  name: 'af-limits-js-only-scripts',
   extends: [...jsOnly],
-  files: SCRIPTS,
+  files: SCRIPTS_JS,
   rules: {
     'no-console': 'off',
   },
