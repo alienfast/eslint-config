@@ -52,7 +52,7 @@ __metadata:
 
 "@alienfast/prettier-config@npm:^1.0.1":
   version: 1.0.1
-  resolution: "@alienfast/prettier-config@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40alienfast%2Fprettier-config%2F1.0.1%2F89c6fbd4dc4644291976ce2b49dd092165baad43"
+  resolution: "@alienfast/prettier-config@npm:1.0.1"
   peerDependencies:
     prettier: "*"
   checksum: 10/13ff0fba6f4441b03ec7b41c99d1961c581463f93fbbd457042135f2b68c598e286b011a7ea3c7dc85c35618783f4b5def4f0e9719435ad94515ea4ccf0dd719
@@ -61,7 +61,7 @@ __metadata:
 
 "@alienfast/tsconfig@npm:^1.0.4":
   version: 1.0.4
-  resolution: "@alienfast/tsconfig@npm:1.0.4::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40alienfast%2Ftsconfig%2F1.0.4%2F6018c8c4dededf8c8bb645e0a1d254afc8938fb4"
+  resolution: "@alienfast/tsconfig@npm:1.0.4"
   dependencies:
     "@tsconfig/create-react-app": "npm:^2.0.5"
   checksum: 10/6d5526403dd032e2affc4bc8cf6f8e5f728ad6530afb5a15ddcd3a9e13be370642e414ee2017a4690cf3e26aaa515563b0d3a5d324b987a37ccded372cff62de
