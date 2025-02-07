@@ -1,3 +1,15 @@
+# v5.1.26 (Fri Feb 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Enable ts in scripts, add test cases ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.1.25 (Wed Jan 22 2025)
 
 #### ⚠️ Pushed to `main`
