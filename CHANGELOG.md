@@ -1,3 +1,16 @@
+# v5.2.8 (Fri Mar 07 2025)
+
+#### ⚠️ Pushed to `main`
+
+- Apply yarn.lock changes ([@rosskevin](https://github.com/rosskevin))
+- lock eslint-plugin-n until resolution ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.2.7 (Fri Mar 07 2025)
 
 #### ⚠️ Pushed to `main`
