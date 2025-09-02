@@ -37,7 +37,7 @@ const configs = defineConfig(
       importX.flatConfigs.warnings,
       importX.flatConfigs.react,
       importX.flatConfigs.typescript,
-      'react-hooks/recommended',
+      reactHooks.configs['recommended-latest'],
       comments.recommended,
     ],
     languageOptions: {
@@ -80,7 +80,6 @@ const configs = defineConfig(
     plugins: {
       'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
-      'react-hooks': reactHooks,
       n,
       unicorn,
     },
