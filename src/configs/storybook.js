@@ -1,5 +1,4 @@
 import { defineConfig } from 'eslint/config'
-import storybook from 'eslint-plugin-storybook'
 
 import { GLOBAL_BUILD_IGNORES, NOT_JS, STORYBOOK_FILES } from '../constants.js'
 import js from './js.js'
@@ -9,17 +8,31 @@ import js from './js.js'
  *
  * View configuration with `npx @eslint/config-inspector`
  */
-const configs = defineConfig([
+
+let storybookIfPresent = [
   GLOBAL_BUILD_IGNORES,
   {
     name: 'af-storybook-files',
     files: [...STORYBOOK_FILES],
   },
-  {
-    name: 'af-storybook',
-    ignores: NOT_JS,
-    extends: [js, storybook.configs['flat/recommended']],
-  },
-])
+]
+try {
+  const csf = await import('storybook/internal/csf')
+  if (csf?.isStory !== undefined) {
+    const mod = await import('eslint-plugin-storybook')
+    const storybook = mod?.default ?? mod
 
+    storybookIfPresent.push({
+      name: 'af-storybook',
+      ignores: NOT_JS,
+      extends: [js, storybook?.configs?.['flat/recommended']],
+    })
+  }
+} catch {
+  // Plugin not installed; continue without Storybook rules
+  // eslint-disable-next-line no-console
+  console.info('Storybook not found, eslint plugin will not be used.')
+}
+
+const configs = defineConfig(...storybookIfPresent)
 export default configs

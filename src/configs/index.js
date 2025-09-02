@@ -12,12 +12,12 @@ const configs = {
   markdown,
   recommended: defineConfig([
     js,
+    storybook,
     limits.tsScriptsAndConfigs,
     limits.jsOnly,
     limits.jsOnlyScripts,
     json,
     markdown,
-    storybook,
   ]),
   other: defineConfig([markdown, json]),
 }
