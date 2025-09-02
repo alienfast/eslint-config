@@ -1,3 +1,15 @@
+# v6.0.3 (Tue Sep 02 2025)
+
+#### ⚠️ Pushed to `main`
+
+- allow comma dangle in json ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.2 (Tue Sep 02 2025)
 
 #### ⚠️ Pushed to `main`
