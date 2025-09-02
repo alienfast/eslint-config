@@ -14,11 +14,11 @@ const configs = defineConfig(GLOBAL_BUILD_IGNORES, {
   plugins: {
     json,
   },
-  language: 'json/jsonc', // comments allowed https://github.com/eslint/json#readme
   extends: ['json/recommended'],
+  language: 'json/jsonc', // comments allowed https://github.com/eslint/json#readme
   languageOptions: {
+    allowTrailingCommas: true,
     parserOptions: {
-      extraFileExtensions: ['.json'],
       projectService: {
         // @see https://typescript-eslint.io/packages/parser#projectservice
         // allow files to be linted without further config
