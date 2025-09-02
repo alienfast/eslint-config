@@ -15,10 +15,8 @@ const configs = defineConfig(GLOBAL_BUILD_IGNORES, {
   plugins: {
     json,
   },
-  extends: [json.configs.recommended],
-  rules: {
-    'json/*': ['error', 'allowComments'],
-  },
+  language: 'json/jsonc', // comments allowed https://github.com/eslint/json#readme
+  extends: ['json/recommended'],
   languageOptions: {
     parserOptions: {
       extraFileExtensions: ['.json'],
