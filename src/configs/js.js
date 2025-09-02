@@ -10,19 +10,17 @@ import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-import { ALL_JS_FILES, BUILD_IGNORES, NOT_JS } from '../constants.js'
-import { compat } from '../legacy.js'
+import { ALL_JS_FILES, GLOBAL_BUILD_IGNORES, NOT_JS } from '../constants.js'
+
+import { defineConfig } from 'eslint/config'
 
 /**
  * Configuration preset for typescript files with any js/ts extension
  *
  * View configuration with `npx @eslint/config-inspector`
  */
-const configs = tseslint.config(
-  {
-    name: 'af-js-ignores',
-    ignores: [...BUILD_IGNORES],
-  },
+const configs = defineConfig(
+  GLOBAL_BUILD_IGNORES,
   {
     name: 'af-js-files',
     files: [...ALL_JS_FILES],
@@ -34,12 +32,12 @@ const configs = tseslint.config(
     extends: [
       // Recommended config applied to all files
       eslint.configs.recommended,
-      ...tseslint.configs.recommendedTypeChecked,
+      tseslint.configs.recommendedTypeChecked,
       importX.flatConfigs.errors,
       importX.flatConfigs.warnings,
       importX.flatConfigs.react,
-      importX.flatConfigs.typescript, // no need of wrapping in compat.config() since there's no pluginImportX.configs.typescript.plugins
-      ...compat.config(reactHooks.configs.recommended),
+      importX.flatConfigs.typescript,
+      'react-hooks/recommended',
       comments.recommended,
     ],
     languageOptions: {
@@ -82,6 +80,7 @@ const configs = tseslint.config(
     plugins: {
       'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
+      'react-hooks': reactHooks,
       n,
       unicorn,
     },

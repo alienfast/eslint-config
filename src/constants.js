@@ -1,5 +1,7 @@
+import { globalIgnores } from 'eslint/config'
+
 export default {}
-export const BUILD_IGNORES = [
+export const GLOBAL_BUILD_IGNORES = globalIgnores([
   'packages/*/lib',
   'lib',
   'packages/*/dist',
@@ -9,7 +11,7 @@ export const BUILD_IGNORES = [
   '**/.pnp*',
   '**/.yarn',
   'storybook-static',
-]
+])
 
 export const SCRIPTS_JS = ['scripts/*.js']
 // used in allowProjectDefault, must be complete and once, as this appears to overwrite/last one wins
