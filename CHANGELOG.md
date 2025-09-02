@@ -1,3 +1,15 @@
+# v6.0.2 (Tue Sep 02 2025)
+
+#### ⚠️ Pushed to `main`
+
+- allow generated changelog file to be anywhere ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.1 (Tue Sep 02 2025)
 
 #### ⚠️ Pushed to `main`
