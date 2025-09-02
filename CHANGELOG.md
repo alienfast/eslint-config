@@ -1,3 +1,15 @@
+# v6.0.0 (Tue Sep 02 2025)
+
+#### 💥 Breaking Change
+
+- Move to standard defineConfig and globalIgnores [#13](https://github.com/alienfast/eslint-config/pull/13) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.2.9 (Tue Sep 02 2025)
 
 #### ⚠️ Pushed to `main`
