@@ -3,7 +3,7 @@
   "description": "AlienFast's eslint config.",
   "packageManager": "yarn@4.9.4",
   "prettier": "@alienfast/prettier-config",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "license": "MIT",
   "repository": "https://github.com/alienfast/eslint-config",
   "publishConfig": {
