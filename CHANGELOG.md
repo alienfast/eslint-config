@@ -1,3 +1,17 @@
+# v6.0.1 (Tue Sep 02 2025)
+
+#### ⚠️ Pushed to `main`
+
+- fix test for import avaliability ([@rosskevin](https://github.com/rosskevin))
+- made storybook inclusion dynamic/optional ([@rosskevin](https://github.com/rosskevin))
+- add back storybook into recommended, need to add the dep anyway ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.0 (Tue Sep 02 2025)
 
 #### 💥 Breaking Change
