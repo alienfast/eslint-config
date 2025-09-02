@@ -17,8 +17,8 @@ const configs = {
     limits.jsOnlyScripts,
     json,
     markdown,
+    storybook,
   ]),
-  storybook,
   other: defineConfig([markdown, json]),
 }
 export default configs
