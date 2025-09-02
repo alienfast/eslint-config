@@ -1,6 +1,7 @@
+import { defineConfig } from 'eslint/config'
+
 import { SCRIPTS_JS } from '../constants.js'
 import jsOnly from './jsOnly.js'
-import { defineConfig } from 'eslint/config'
 
 /**
  * Turn off rules not necessary for scripts

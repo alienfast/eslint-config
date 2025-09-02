@@ -1,8 +1,8 @@
-import tseslint from 'typescript-eslint'
 import markdown from '@eslint/markdown'
+import { defineConfig } from 'eslint/config'
+import tseslint from 'typescript-eslint'
 
 import { GLOBAL_BUILD_IGNORES, MD_FILES } from '../constants.js'
-import { defineConfig } from 'eslint/config'
 
 /**
  * Configuration preset for markdown files

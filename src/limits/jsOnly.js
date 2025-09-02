@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
 import { JS_FILES } from '../constants.js'
-import { defineConfig } from 'eslint/config'
 
 /**
  * Turn off rules not necessary for js only files.

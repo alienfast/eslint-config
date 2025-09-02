@@ -1,5 +1,6 @@
 import eslint from '@eslint/js'
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import { defineConfig } from 'eslint/config'
 import importX from 'eslint-plugin-import-x'
 import n from 'eslint-plugin-n'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
@@ -11,8 +12,6 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 import { ALL_JS_FILES, GLOBAL_BUILD_IGNORES, NOT_JS } from '../constants.js'
-
-import { defineConfig } from 'eslint/config'
 
 /**
  * Configuration preset for typescript files with any js/ts extension

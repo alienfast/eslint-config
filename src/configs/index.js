@@ -1,4 +1,5 @@
 import { defineConfig } from 'eslint/config'
+
 import limits from '../limits/index.js'
 import js from './js.js'
 import json from './json.js'

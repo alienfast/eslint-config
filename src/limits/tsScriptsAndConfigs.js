@@ -1,6 +1,7 @@
+import { defineConfig } from 'eslint/config'
+
 import js from '../configs/js.js'
 import { ALLOW_DEFAULT_PROJECT_TS } from '../constants.js'
-import { defineConfig } from 'eslint/config'
 
 /**
  * Turn off rules not necessary for scripts and configs.

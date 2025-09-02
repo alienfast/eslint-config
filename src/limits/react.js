@@ -1,5 +1,6 @@
-import { ALL_JS_FILES } from '../constants.js'
 import { defineConfig } from 'eslint/config'
+
+import { ALL_JS_FILES } from '../constants.js'
 
 /**
  * Turn off rules not necessary for js only files.

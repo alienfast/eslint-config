@@ -1,8 +1,7 @@
 import json from '@eslint/json'
+import { defineConfig } from 'eslint/config'
 
 import { GLOBAL_BUILD_IGNORES, JSON_FILES } from '../constants.js'
-
-import { defineConfig } from 'eslint/config'
 
 /**
  * Configuration preset for json files
