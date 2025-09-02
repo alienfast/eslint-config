@@ -17,6 +17,7 @@ let storybookIfPresent = [
   },
 ]
 try {
+  // eslint-disable-next-line import-x/no-unresolved
   const csf = await import('storybook/internal/csf')
   if (csf?.isStory !== undefined) {
     const mod = await import('eslint-plugin-storybook')
