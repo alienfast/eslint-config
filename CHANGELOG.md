@@ -1,3 +1,15 @@
+# v5.2.9 (Tue Sep 02 2025)
+
+#### ⚠️ Pushed to `main`
+
+- ncu ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v5.2.8 (Fri Mar 07 2025)
 
 #### ⚠️ Pushed to `main`
