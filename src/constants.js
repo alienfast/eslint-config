@@ -5,12 +5,14 @@ export const GLOBAL_BUILD_IGNORES = globalIgnores([
   'packages/*/lib',
   'lib',
   'packages/*/dist',
+  'package-lock.json',
   'dist',
   '**/typings-local',
   '**/typings',
   '**/.pnp*',
   '**/.yarn',
   'storybook-static',
+  'CHANGELOG.md', // because this is a generated file from auto (typically)
 ])
 
 export const SCRIPTS_JS = ['scripts/*.js']
