@@ -12,7 +12,7 @@ export const GLOBAL_BUILD_IGNORES = globalIgnores([
   '**/.pnp*',
   '**/.yarn',
   'storybook-static',
-  'CHANGELOG.md', // because this is a generated file from auto (typically)
+  '**/CHANGELOG.md', // because this is a generated file from auto (typically)
 ])
 
 export const SCRIPTS_JS = ['scripts/*.js']
