@@ -1,4 +1,4 @@
-import tseslint from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
 import { ALL_JS_FILES } from '../constants.js'
 
@@ -9,7 +9,7 @@ import { ALL_JS_FILES } from '../constants.js'
  *
  * View config with `npx @eslint/config-inspector`
  */
-const configs = tseslint.config({
+const configs = defineConfig({
   name: 'af-limits-react',
   files: ALL_JS_FILES,
   rules: {

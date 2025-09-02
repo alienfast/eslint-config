@@ -1,22 +1,24 @@
-import markdown from 'eslint-plugin-markdown'
+import markdown from '@eslint/markdown'
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
-import { BUILD_IGNORES, MD_FILES } from '../constants.js'
+import { GLOBAL_BUILD_IGNORES, MD_FILES } from '../constants.js'
 
 /**
  * Configuration preset for markdown files
  *
  * View configuration with `npx @eslint/config-inspector`
  */
-const configs = tseslint.config(
-  // ...markdown.configs.recommended,
+const configs = defineConfig(
+  GLOBAL_BUILD_IGNORES,
   {
-    name: 'af-markdown-ignores',
-    ignores: [...BUILD_IGNORES],
+    plugins: {
+      markdown,
+    },
   },
   {
     name: 'af-markdown',
-    extends: [...markdown.configs.recommended],
+    extends: [markdown.configs.recommended],
     files: MD_FILES,
   },
   {

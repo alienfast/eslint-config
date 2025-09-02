@@ -1,3 +1,4 @@
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
 
 import { JS_FILES } from '../constants.js'
@@ -9,10 +10,10 @@ import { JS_FILES } from '../constants.js'
  *
  * View config with `npx @eslint/config-inspector`
  */
-const configs = tseslint.config({
+const configs = defineConfig({
   name: 'af-limits-js-only',
   files: JS_FILES,
-  ...tseslint.configs.disableTypeChecked,
+  extends: [tseslint.configs.disableTypeChecked],
   // rules: {
   //   '@typescript-eslint/no-unsafe-argument': 'off',
   //   '@typescript-eslint/no-unsafe-member-access': 'off',

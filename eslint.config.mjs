@@ -1,4 +1,4 @@
-import tseslint from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
 import af from './src/index.js'
 
@@ -7,7 +7,4 @@ import af from './src/index.js'
  *
  * View config with `npx @eslint/config-inspector`
  */
-export default tseslint.config({
-  name: 'project',
-  extends: [...af.configs.recommended],
-})
+export default defineConfig([af.configs.recommended])
