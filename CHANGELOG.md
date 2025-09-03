@@ -1,3 +1,17 @@
+# v6.0.4 (Wed Sep 03 2025)
+
+#### ⚠️ Pushed to `main`
+
+- ** is disallowed ([@rosskevin](https://github.com/rosskevin))
+- allow for nested scripts in default project ([@rosskevin](https://github.com/rosskevin))
+- no need to allow default project on json files ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.3 (Tue Sep 02 2025)
 
 #### ⚠️ Pushed to `main`
