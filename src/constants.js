@@ -17,7 +17,12 @@ export const GLOBAL_BUILD_IGNORES = globalIgnores([
 
 export const SCRIPTS_JS = ['scripts/*.js']
 // used in allowProjectDefault, must be complete and once, as this appears to overwrite/last one wins
-export const ALLOW_DEFAULT_PROJECT_TS = ['*.ts', 'packages/*/*.ts', 'scripts/**/*.ts']
+export const ALLOW_DEFAULT_PROJECT_TS = [
+  '*.ts',
+  'packages/*/*.ts',
+  'scripts/*.ts', // ** is disallowed
+  'scripts/*/*.ts',
+]
 
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']
 export const JS_FILES = ['**/*.{js,jsx,mjs,cjs}']
