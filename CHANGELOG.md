@@ -1,3 +1,15 @@
+# v6.0.5 (Wed Sep 03 2025)
+
+#### ⚠️ Pushed to `main`
+
+- up the max limit of default project files ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.4 (Wed Sep 03 2025)
 
 #### ⚠️ Pushed to `main`
