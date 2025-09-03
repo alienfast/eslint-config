@@ -51,10 +51,6 @@ const configs = defineConfig(
         // project: ['./tsconfig*.json'],
         project: true,
         warnOnUnsupportedTypeScriptVersion: true,
-        // see limits/tsScriptsAndConfigs.js instead of using allowDefaultProject here
-        // projectService: {
-        //    allowDefaultProject: CONFIG_TS,
-        // },
       },
     },
 

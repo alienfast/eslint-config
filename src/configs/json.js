@@ -18,13 +18,6 @@ const configs = defineConfig(GLOBAL_BUILD_IGNORES, {
   language: 'json/jsonc', // comments allowed https://github.com/eslint/json#readme
   languageOptions: {
     allowTrailingCommas: true,
-    parserOptions: {
-      projectService: {
-        // @see https://typescript-eslint.io/packages/parser#projectservice
-        // allow files to be linted without further config
-        allowDefaultProject: ['*.json', 'packgages/*.json', 'packages/*/*.json', '.vscode/*.json'],
-      },
-    },
   },
 })
 
