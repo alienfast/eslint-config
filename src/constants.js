@@ -22,6 +22,7 @@ export const ALLOW_DEFAULT_PROJECT_TS = [
   'packages/*/*.ts',
   'scripts/*.ts', // ** is disallowed
   'scripts/*/*.ts',
+  // '.storybook/*.{ts,tsx,mts,cts}', too hard...
 ]
 
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}']

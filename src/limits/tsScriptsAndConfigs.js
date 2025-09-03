@@ -13,7 +13,7 @@ import { ALLOW_DEFAULT_PROJECT_TS } from '../constants.js'
  * View config with `npx @eslint/config-inspector`
  */
 const configs = defineConfig({
-  name: 'af-limits-ts-scripts',
+  name: 'af-limits-ts-scripts-and-config',
   extends: [js],
   files: ALLOW_DEFAULT_PROJECT_TS,
   rules: {
@@ -26,6 +26,7 @@ const configs = defineConfig({
         // @see https://typescript-eslint.io/packages/parser#projectservice
         // allow one-off scripts project/package ts files to be linted without further config
         allowDefaultProject: ALLOW_DEFAULT_PROJECT_TS,
+        maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 12, // for bigger monorepos
       },
     },
   },
