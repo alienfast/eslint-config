@@ -1,3 +1,15 @@
+# v6.0.6 (Sun Sep 14 2025)
+
+#### 🐛 Bug Fix
+
+- deps: Update ESLint ecosystem packages to latest stable versions [#14](https://github.com/alienfast/eslint-config/pull/14) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.5 (Wed Sep 03 2025)
 
 #### ⚠️ Pushed to `main`
