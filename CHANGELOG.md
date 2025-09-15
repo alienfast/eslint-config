@@ -1,3 +1,15 @@
+# v6.0.7 (Mon Sep 15 2025)
+
+#### ⚠️ Pushed to `main`
+
+- remove temp file, adjust build ignores for monorepo cloud packages ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.6 (Sun Sep 14 2025)
 
 #### 🐛 Bug Fix
