@@ -2,11 +2,10 @@ import { globalIgnores } from 'eslint/config'
 
 export default {}
 export const GLOBAL_BUILD_IGNORES = globalIgnores([
-  'packages/*/lib',
-  'lib',
+  'cloud/*/dist',
   'packages/*/dist',
-  'package-lock.json',
   'dist',
+  'package-lock.json',
   '**/typings-local',
   '**/typings',
   '**/.pnp*',
