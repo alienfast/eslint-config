@@ -1,3 +1,15 @@
+# v6.0.9 (Wed Sep 24 2025)
+
+#### ⚠️ Pushed to `main`
+
+- just get around this for now ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.8 (Wed Sep 24 2025)
 
 #### ⚠️ Pushed to `main`
