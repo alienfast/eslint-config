@@ -1,3 +1,15 @@
+# v6.0.8 (Wed Sep 24 2025)
+
+#### ⚠️ Pushed to `main`
+
+- bump up default project file count and ncu ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v6.0.7 (Mon Sep 15 2025)
 
 #### ⚠️ Pushed to `main`
