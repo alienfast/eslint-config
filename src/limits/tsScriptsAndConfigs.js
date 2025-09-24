@@ -26,7 +26,7 @@ const configs = defineConfig({
         // @see https://typescript-eslint.io/packages/parser#projectservice
         // allow one-off scripts project/package ts files to be linted without further config
         allowDefaultProject: ALLOW_DEFAULT_PROJECT_TS,
-        maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 20, // for bigger monorepos
+        maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 50, // for bigger monorepos
       },
     },
   },
